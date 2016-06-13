@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <translate
+        android:duration="2000"
+        android:fromYDelta="100.0%"
+        android:toYDelta="0.0" />
+    <!--duration表示动画持续时间，单位毫秒。
+   fromYDelta表示起始时y轴的位置
+    toYDelta表示结束时y轴的位置-->
+</set>

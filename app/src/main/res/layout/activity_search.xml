@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.acer.zzia_mxbt.activity.SearchActivity">
+
+    <!--整体一个框架-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--主题版块-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+            <!--主题头部-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="专题"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/search_theme_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="240dp"
+                    android:text="更多"
+                    android:textSize="18sp" />
+            </LinearLayout>
+            <!--主题滚动-->
+            <android.support.v4.view.ViewPager
+                android:id="@+id/search_theme_viewPage"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_gravity="center">
+
+            </android.support.v4.view.ViewPager>
+            <!--主题圆点-->
+            <LinearLayout
+                android:id="@+id/search_theme_dotLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="-30dp"
+                android:orientation="horizontal">
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <!--标签版块-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+            <!--标签头部-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="标签"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/search_lable_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="240dp"
+                    android:text="更多"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <!--标签横向listview-->
+            <com.example.acer.zzia_mxbt.view.HorizontalListView
+                android:id="@+id/search_lable_horizontallListView"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="140dp">
+
+            </com.example.acer.zzia_mxbt.view.HorizontalListView>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>

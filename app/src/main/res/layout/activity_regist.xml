@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?><!--注册页面的布局-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".RegistActivity">
+
+    <!--返回键-->
+    <ImageView
+        android:id="@+id/regist_returnback"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/back" />
+
+    <!--注册文本-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginRight="50dp"
+        android:text="注册"
+        android:textSize="20sp" />
+
+    <!--APP的logo-->
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/logo" />
+
+    <!--用户注册所填写信息，内部包含3个LinearLayout布局-->
+    <LinearLayout
+        android:id="@+id/middle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical">
+
+        <!--每一项使用图像加文本的形式-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <!--图像-->
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/user" />
+
+            <!--文本，样式采用自定义：style="@style/regist_edittext_style"-->
+            <EditText
+                android:id="@+id/regist_uname"
+                style="@style/regist_edittext_style"
+                android:hint="注册手机号"
+                android:phoneNumber="true" />
+        </LinearLayout>
+
+
+        <!--每一项使用图像加文本的形式-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <!--图像-->
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/suo" />
+            <!--文本，样式采用自定义：style="@style/regist_edittext_style"-->
+            <EditText
+                android:id="@+id/regist_upassword"
+                style="@style/regist_edittext_style"
+                android:hint="请输入密码"
+                android:inputType="textPassword" />
+        </LinearLayout>
+
+        <!--每一项使用图像加文本的形式-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <!--图像-->
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/suo" />
+            <!--文本，样式采用自定义：style="@style/regist_edittext_style"-->
+            <EditText
+                android:id="@+id/regist_reupassword"
+                style="@style/regist_edittext_style"
+                android:hint="请确认密码"
+                android:inputType="textPassword" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--立即注册按钮，背景自定义：android:background="@drawable/regist_button"-->
+    <Button
+        android:id="@+id/regist_submit"
+        android:layout_width="260dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/middle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/regist_button"
+        android:text="立即注册"
+        android:textColor="#ffffff" />
+
+    <!--第三方登录的布局-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/regist_submit"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:orientation="vertical">
+        <!--注册的文本信息-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="10dp"
+            android:text="使用第三方帐号登录"
+            android:textSize="14sp" />
+        <!--第三方登录的图标-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+            <!--微博登录-->
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/weibo" />
+            <!--微信登录-->
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/weixin" />
+            <!--QQ登录-->
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/qq" />
+        </LinearLayout>
+        <!--登录，注册的同意协议-->
+        <TextView
+            android:id="@+id/regist_protocol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/text_agree"
+            android:textSize="12sp" />
+    </LinearLayout>
+</RelativeLayout>

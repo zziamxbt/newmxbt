@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--动画布局：animationOrder="random",表示动画执行的顺序；delay="0.5"：时间间隔，
+animation="@anim/list_anim"：引用的文件，-->
+<layoutAnimation xmlns:android="http://schemas.android.com/apk/res/android"
+    android:animation="@anim/list_anim"
+    android:animationOrder="random"
+    android:delay="0.5">
+</layoutAnimation>

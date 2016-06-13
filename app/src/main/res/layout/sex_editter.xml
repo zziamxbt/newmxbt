@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="选择性别"
+        android:gravity="center_horizontal"/>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="80dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/radioGroup">
+        <RadioButton
+            android:id="@+id/edit_sex_boy_selector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:id="@+id/edit_sex_girl_selector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RadioGroup>
+    <ImageView
+        android:id="@+id/edit_sex_boy_img"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/sex_boy"
+        android:layout_alignTop="@+id/radioGroup"
+        android:layout_marginLeft="80dp"
+        android:layout_marginStart="80dp" />
+    <TextView
+        android:id="@+id/edit_sex_boy_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="男"
+        android:textSize="20dp"
+
+        android:layout_alignTop="@+id/edit_sex_boy_img"
+        android:layout_toRightOf="@+id/edit_sex_boy_img"
+        android:layout_toEndOf="@+id/edit_sex_boy_img" />
+
+    <ImageView
+        android:id="@+id/edit_sex_girl_img"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/sex_girl"
+        android:layout_alignBottom="@+id/radioGroup"
+        android:layout_alignLeft="@+id/edit_sex_boy_img"
+        android:layout_alignStart="@+id/edit_sex_boy_img" />
+    <TextView
+        android:id="@+id/edit_sex_girl_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="女"
+        android:textSize="20dp"
+        android:layout_alignTop="@+id/edit_sex_girl_img"
+        android:layout_toRightOf="@+id/edit_sex_girl_img"
+        android:layout_toEndOf="@+id/edit_sex_girl_img" />
+    <TextView
+        android:id="@+id/makesure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="确定"
+        android:textSize="25dp"
+        android:textColor="#5dffcc"
+        android:layout_below="@+id/edit_sex_girl_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp" />
+</RelativeLayout>

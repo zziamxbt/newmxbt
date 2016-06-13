@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/side_search"
+            android:icon="@drawable/index_search"
+            android:title="发        现"
+            />
+        <item
+            android:id="@+id/side_message"
+            android:icon="@drawable/index_menu"
+            android:title="消息中心" />
+        <item
+            android:id="@+id/side_collect"
+            android:icon="@drawable/index_more"
+            android:title="我的收藏" />
+        <item
+            android:id="@+id/side_recentread"
+            android:icon="@drawable/index_menu"
+            android:title="近期阅读" />
+        <item
+            android:id="@+id/side_download"
+            android:icon="@drawable/index_menu"
+            android:title="离线阅读" />
+    </group>
+
+    <item android:title="">
+        <menu>
+            <item
+                android:id="@+id/side_config"
+                android:icon="@drawable/ic_menu_share"
+                android:title="设        置" />
+            <item
+                android:id="@+id/side_nightmode"
+                android:icon="@drawable/ic_menu_send"
+                android:title="夜间模式"
+                />
+
+            <item
+                android:id="@+id/side_quit"
+                android:icon="@drawable/ic_menu_send"
+                android:title="退出登录"
+                />
+        </menu>
+    </item>
+
+</menu>
