@@ -1,0 +1,110 @@
+<resources>
+    <string name="app_name">My Application</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="noname">匿名</string>
+    <string name="defaulttime">00:00:00</string>
+    <string name="pull_to_refresh_pull_label" translatable="false">向下拉动可以刷新</string>
+    <string name="pull_to_refresh_release_label" translatable="false">松开可以刷新</string>
+    <string name="pull_to_refresh_refreshing_label" translatable="false">加载中…</string>
+    <string name="pull_to_refresh_tap_label" translatable="false">点击刷新</string>
+    <string name="umeng_socialize_network_break_alert" translatable="false">请连接网络后再尝试！</string>
+    <string name="umeng_socialize_comment" translatable="false">评论</string>
+    <string name="umeng_socialize_comment_detail" translatable="false">评论详情</string>
+    <string name="umeng_socialize_back" translatable="false">返回</string>
+    <string name="umeng_socialize_near_At" translatable="false">最近\@的好友</string>
+    <string name="umeng_socialize_friends" translatable="false">关注的好友</string>
+    <string name="umeng_socialize_send" translatable="false">发布</string>
+    <string name="umeng_socialize_tip_blacklist" translatable="false">对不起，因为违反了用户协议您已被禁言.</string>
+    <string name="umeng_socialize_tip_loginfailed" translatable="false">登录失败…</string>
+    <string name="umeng_socialize_msg_sec" translatable="false">秒前</string>
+    <string name="umeng_socialize_msg_min" translatable="false">分钟前</string>
+    <string name="umeng_socialize_msg_hor" translatable="false">小时前</string>
+    <string name="umeng_socialize_ucenter_login_title_guide" translatable="false">游客登录</string>
+    <string name="umeng_socialize_ucenter_login_title_platform" translatable="false">登录帐号</string>
+    <dimen name="alphabet_size">12dip</dimen>
+    <dimen name="umeng_socialize_pad_window_height">350dip</dimen>
+    <dimen name="umeng_socialize_pad_window_width">580dip</dimen>
+    <string name="umeng_socialize_share_content">友盟社会化组件（SDK）让移动应用快速整合社交分享功能，我们简化了社交平台的接入，为开发者提供坚实的基础服务。（一）支持各大主流社交平台， （二）支持图片、文字、gif动图、音频、视频；@好友，关注官方微博等功能。 （三）提供详尽的后台用户社交行为分析。www.umeng.com/social</string>
+    <string name="umeng_socialize_login_qq">QQ空间</string>
+    <string name="umeng_socialize_login">登录</string>
+    <string name="umeng_socialize_text_choose_account">选择已有帐号登录</string>
+    <string name="umeng_socialize_text_authorize">授权</string>
+    <string name="umeng_socialize_text_unauthorize">未授权</string>
+    <string name="umeng_socialize_text_ucenter">个人中心</string>
+    <string name="umeng_socialize_text_login_fail">登录失败了，请重试</string>
+    <string name="umeng_socialize_text_comment_hint">说点什么吧…</string>
+    <string name="umeng_socialize_text_friend_list">好友列表</string>
+    <string name="umeng_socialize_text_visitor">游客</string>
+    <string name="umeng_socialize_text_tencent_no_connection">无法连接到腾讯微博客户端</string>
+    <string name="umeng_socialize_text_tencent_oauth_login_fail">授权登录失败</string>
+    <string name="umeng_socialize_text_tencent_version_no_match">版本不匹配，SSO只对微博客户端V3.8.1及以上的版本提供支持</string>
+    <string name="umeng_socialize_text_tencent_no_install">未安装腾讯微博客户端</string>
+    <string name="umeng_socialize_text_waitting">请稍候...</string>
+    <string name="umeng_socialize_text_waitting_weixin">跳转微信中，请稍候...</string>
+    <string name="umeng_socialize_text_waitting_weixin_circle">跳转朋友圈中，请稍候...</string>
+    <string name="umeng_socialize_text_waitting_yixin">跳转易信中，请稍候...</string>
+    <string name="umeng_socialize_text_waitting_yixin_circle">跳转易信朋友圈中，请稍候...</string>
+    <string name="umeng_socialize_text_waitting_qq">跳转QQ中，请稍候...</string>
+    <string name="umeng_socialize_text_waitting_qzone">跳转QZone中，请稍候...</string>
+    <string name="umeng_socialize_text_waitting_redirect">跳转</string>
+    <string name="umeng_socialize_text_waitting_message">,请稍候...</string>
+    <string name="umeng_socialize_text_loading_message">载入中,请稍候...</string>
+    - <!--  平台名称
+  -->
+    <string name="umeng_socialize_text_tencent_key">腾讯微博</string>
+    <string name="umeng_socialize_text_sina_key">微博</string>
+    <string name="umeng_socialize_text_qq_key">QQ</string>
+    <string name="umeng_socialize_text_qq_zone_key">QQ空间</string>
+    <string name="umeng_socialize_text_renren_key">人人网</string>
+    <string name="umeng_socialize_text_douban_key">豆瓣网</string>
+    <string name="umeng_socialize_text_weixin_key">微信</string>
+    <string name="umeng_socialize_text_weixin_circle_key">微信朋友圈</string>
+    <string name="umeng_socialize_text_add_custom_platform">请配置用户平台</string>
+    <string name="umeng_example_home_btn_plus">社交分享</string>
+    <string name="umeng_socialize_text_waitting_share">分享中…</string>
+    <string name="umeng_socialize_content_hint">说点啥…</string>
+    <string name="umeng_socialize_cancel_btn_str">取消</string>
+    <string name="umeng_socialize_send_btn_str">发送</string>
+    <string name="umeng_socialize_img_des" />
+    <string name="umeng_socialize_share">分享</string>
+    <string name="text_agree">注册登录即表示您同意我们的<u>用户许可协议</u></string>
+    <string name="text">
+        梦溪笔谈平台用户协议（社区指导原则）\n\n
+        欢迎您来到梦溪笔谈。请务必仔细阅读本条款，您的直接或通过各类方式对犀牛故事的下载，安装，使用，帐号获取，分享和登录等使用梦溪笔谈
+        故事服务和数据的行为，将被视为已无条件接受本声明所涉及全部内容。若您对本声明的任何条款有异议，请梦停止使用溪笔谈平台所提供的全部服务。\n\n
+        1.使用规则\n\n
+        1.1\n
+        用户注册成功后，应妥善保管帐号的帐号和密码；用户应当对“用户账户”进行的所有活动和行为负法律责任。\n\n
+        1.2\n
+        用户须对在梦溪笔谈注册信息的真实性，合法性，有效性承担全部责任，用户不得冒充他人；不得利用他人名义发布任何消息；不得恶意使用注册账号导致
+        其他用户误认；否则，梦溪笔谈有权立即停止提供服务，收回其帐号，并且由用户独自承担由此而产生的一切法律责任。\n\n
+        1.3\n
+        用户承诺不得以任何方式利用梦溪笔谈直接或间接从事违反法律，以及社会公德的行为，梦溪笔谈有权对违反上述承诺的内容予以隐藏，删除。\n\n
+        1.4\n
+        梦溪笔谈有权根据本用户协议对用户使用梦溪笔谈的情况进行审查和监督，如用户在使用时违反上述任何规定，梦溪笔谈或其授权方有权要求用户改正
+        或直接采取一些必要的措施（包括但不限于更改或删除用户张贴的内容，暂停或终止用户使用梦溪笔谈的的权利）以减轻用户不当行为造成的影响。\n\n
+        2.知识产权\n\n
+        梦溪笔谈是一个原创信息获取、分享及传播的平台，我们尊重和鼓励梦溪笔谈的用户发表原创内容，承诺将保护知识产权作为梦溪笔谈运营的基本原则之一。\n\n
+        2.1\n
+        用户在梦溪笔谈上发表的所有内容和评论，著作权均归用户所有。\n\n
+        2.2\n
+        梦溪笔谈提供的网络服务中包含的标识、排版方式、为本、图片等军售著作权、商标及其他法律保护，未经相关权利人同意，上述内容均不得在任何平台
+        被直接或间接发布、使用，或被用于其他商业目的。\n\n
+        3.个人隐私\n\n
+        尊重用户个人隐私信息的私有性是梦溪笔谈的运营基本原则，梦溪笔谈将通过技术手段、强化内部管理等方法充分保护用户的个人隐私信息。同时，为了运营
+        和改善梦溪笔谈的技术与服务，梦溪笔谈可能会自行收集使用或向第三方提供用户的非个人隐私信息。\n\n
+        4.免责声明\n\n
+        用户在梦溪笔谈发表的言论、文章只代表其个人的立场和观点，并不代表梦溪笔谈的立场或观点。作为内容的发表者，须自行对发表的内容负责。因所发内容引起
+        的一切纠纷，由该内容的发表者承担全部法律及连带责任。梦溪笔谈不承担任何法律及连带责任。\n\n
+        5.协议修改\n\n
+        根据互联网的发展和有关法律、法规及规范性文件的变化，或者因业务发展需要，梦溪笔谈有权对本协议的条款作出修改或变更。梦溪笔谈会直接发布协议修改的通知。\n\n
+        \n\n
+    </string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

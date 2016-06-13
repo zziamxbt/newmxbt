@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+   >
+
+
+
+    <!--首页页头布局-->
+    <RelativeLayout
+        android:layout_margin="8dp"
+        android:id="@+id/indexhead"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!--首页菜单图标-->
+        <ImageView
+            android:id="@+id/index_menu"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:padding="2dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/index_menu"
+
+            />
+        <!--首页更多图标-->
+        <ImageView
+            android:id="@+id/index_more"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:padding="1dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/index_more"
+            android:scaleType="fitXY"/>
+        <!--首页搜索图标-->
+        <ImageView
+            android:id="@+id/index_search"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:padding="1dp"
+            android:layout_marginRight="15dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/index_more"
+            android:src="@drawable/index_search"
+            android:scaleType="fitXY"/>
+        <!--首页分类图标及内容-->
+        <RelativeLayout
+            android:id="@+id/index_kind"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <!--圆环-->
+            <ImageView
+                android:padding="1dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:id="@+id/kind_ring"
+                android:src="@drawable/ring_any"/>
+            <!--分类-->
+            <TextView
+                android:layout_alignTop="@id/kind_ring"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/kind_ring"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:text="首页"
+                android:textColor="#000000"
+                android:id="@+id/kind_content"/>
+            <!--首页点图-->
+            <ImageView
+                android:id="@+id/point_any"
+                android:layout_width="4dp"
+                android:layout_height="4dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/point_select"
+                android:layout_below="@id/kind_ring"
+                />
+            <!--分类1点图-->
+            <ImageView
+                android:layout_marginLeft="8dp"
+                android:id="@+id/point_green"
+                android:layout_alignTop="@id/point_any"
+                android:layout_width="4dp"
+                android:layout_height="4dp"
+                android:src="@drawable/point_unselect"
+                android:layout_toRightOf="@id/point_any"
+                />
+            <!--分类2点图-->
+            <ImageView
+                android:layout_marginLeft="8dp"
+                android:id="@+id/point_yellow"
+                android:layout_alignTop="@id/point_any"
+                android:layout_width="4dp"
+                android:layout_height="4dp"
+
+                android:src="@drawable/point_unselect"
+                android:layout_toRightOf="@id/point_green"
+                />
+            <!--分类3点图-->
+            <ImageView
+                android:layout_marginLeft="8dp"
+                android:id="@+id/point_blue"
+                android:layout_alignTop="@id/point_any"
+                android:layout_width="4dp"
+                android:layout_height="4dp"
+
+                android:src="@drawable/point_unselect"
+                android:layout_toRightOf="@id/point_yellow"
+                />
+            <!--分类4点图-->
+            <ImageView
+                android:layout_marginLeft="8dp"
+                android:id="@+id/point_red"
+                android:layout_alignTop="@id/point_any"
+                android:layout_width="4dp"
+                android:layout_height="4dp"
+                android:src="@drawable/point_unselect"
+                android:layout_toRightOf="@id/point_blue"
+                />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+
+
+</merge>

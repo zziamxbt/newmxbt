@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/tools"
+    android:id="@+id/cardview"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@android:color/white"
+
+    app:cardElevation="10dp"
+    app:contentPadding="5dip">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/vote_head"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/vote_name"
+                android:text="吴龙飞"
+
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/vote_head"
+                android:layout_toEndOf="@+id/vote_head" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:id="@+id/vote_publishtime"
+                android:text="三天前发表"
+                android:textSize="10sp"
+
+                android:layout_below="@+id/vote_name"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/vote_head"
+                android:layout_toEndOf="@+id/vote_head" />
+        </RelativeLayout>
+      <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+          <com.facebook.drawee.view.SimpleDraweeView
+              android:id="@+id/vote_coverimg"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+
+
+              />
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:id="@+id/vote_title"
+              android:textColor="@color/material_deep_teal_500"
+              android:text="再见吧，朋友"
+              android:layout_marginTop="10dp"
+              android:layout_marginBottom="5dp"
+              android:layout_centerHorizontal="true"
+              android:layout_below="@+id/vote_coverimg"/>
+          <ImageView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:id="@+id/vote_good"
+              android:src="@drawable/vote_good"
+              android:layout_alignParentRight="true"
+              android:layout_marginRight="30dp"
+              android:layout_alignTop="@+id/vote_num"
+              android:layout_alignBottom="@+id/vote_num"
+
+               />
+           <TextView android:id="@+id/vote_num"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+               android:text="投票数"
+               android:gravity="right"
+              android:textColor="@color/material_deep_teal_500"
+               android:layout_below="@+id/vote_title"
+               android:layout_alignParentLeft="true"
+               android:layout_alignParentStart="true" />
+
+       </RelativeLayout>
+    </LinearLayout>
+
+
+</android.support.v7.widget.CardView>

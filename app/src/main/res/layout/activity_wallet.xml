@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darkgray"
+    android:orientation="vertical"
+    tools:context="com.example.acer.zzia_mxbt.activity.WalletActivity">
+
+    <RelativeLayout
+        android:id="@+id/User_bg"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/user_bg">
+
+        <RelativeLayout
+            android:id="@+id/mohu"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="#000000">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/UserPortraits"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    fresco:placeholderImage="@drawable/author_portraits"
+                    fresco:roundAsCircle="true"></com.facebook.drawee.view.SimpleDraweeView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingTop="10dp">
+
+                    <TextView
+                        android:id="@+id/UserName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="吴龙飞"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:id="@+id/User_sex"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:src="@drawable/sex_boy" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="金币:  "
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/goldNum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/coloryellow"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/footer_head_border">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingLeft="10dp"
+                android:text="充值金币: " />
+
+            <EditText
+                android:id="@+id/nine"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:numeric="integer"
+                android:background="@null"
+                android:textColor="@color/coloryellow"
+                android:hint="金币数" />
+        </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:text="请选择金币数量"
+        android:textSize="15sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:id="@+id/one"
+            style="@style/button_setting"
+            android:onClick="one"
+            android:text="10金币" />
+        　　
+
+        <TextView
+            android:id="@+id/two"
+            style="@style/button_setting"
+            android:onClick="two"
+            android:text="25金币" />
+        　　　
+
+        <TextView
+            android:id="@+id/three"
+            style="@style/button_setting"
+            android:onClick="three"
+            android:text="50金币" />
+        　　
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/four"
+            style="@style/button_setting"
+            android:onClick="four"
+            android:text="100金币" />
+        　　
+
+        <TextView
+            android:id="@+id/five"
+            style="@style/button_setting"
+            android:onClick="five"
+            android:text="500金币" />
+        　　
+
+        <TextView
+            android:id="@+id/six"
+            style="@style/button_setting"
+            android:onClick="six"
+            android:text="1000金币" />
+        　　
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/seven"
+            style="@style/button_setting"
+            android:onClick="seven"
+            android:text="5000金币" />
+        　　
+
+        <TextView
+            android:id="@+id/eight"
+            style="@style/button_setting"
+            android:onClick="eight"
+            android:text="10000金币" />
+        　　
+
+        <TextView
+
+            style="@style/button_setting"
+            android:background="@color/darkgray"/>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="售价:" />
+
+        <TextView
+            android:id="@+id/PayMoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.0"
+            android:textColor="@color/colorRed"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="元 （1元=10金币）" />
+
+
+    </LinearLayout>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/charge_round"
+        android:onClick="Charge"
+        android:text="充 值"
+        android:textSize="20sp" />
+
+</LinearLayout>
+

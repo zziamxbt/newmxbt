@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ListView
+        android:id="@+id/ArticleList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="#f2f2f5"
+        android:dividerHeight="5dp"></ListView>
+    <!-- 使用include包含设置布局-->
+    <include layout="@layout/listview_article_settings"></include>
+
+    <!--<include layout="@layout/listview_article_head"></include>-->
+
+    <ListView
+        android:id="@+id/ChapterList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#efffffff"
+        android:divider="@null"
+        android:focusable="true"
+        android:paddingBottom="20dp"
+        android:paddingTop="80dp"
+        android:visibility="gone"></ListView>
+
+    <RelativeLayout
+        android:id="@+id/ArticleTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/footer_head_border">
+
+        <ImageView
+            android:paddingTop="15dp"
+            android:paddingLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="Back"
+            android:background="@null"
+            android:src="@drawable/fanhui" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@null"
+            >
+            <Button
+                android:onClick="ButtonChapterListerner"
+                android:id="@+id/ChapterButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:textStyle="bold"
+                android:text="封面" />
+            <ImageView
+                android:onClick="ImageViewChapterListerner"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/show_down"
+                android:src="@drawable/show_down"/>
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:paddingRight="15dp"
+            android:paddingTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@null"
+            android:onClick="ButtonSettingsListerner"
+            android:src="@drawable/font_setting"/>
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ArticleButtom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/footer_head_border"
+        android:weightSum="4">
+        <LinearLayout
+            android:onClick="MyRecommended"
+            android:orientation="vertical"
+            android:layout_width="0sp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            >
+            <ImageView
+                android:paddingTop="10dp"
+                android:id="@+id/tuijian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/tuijian"/>
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:background="@null"
+                android:text="推 荐" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:onClick="MyCollection"
+            android:orientation="vertical"
+            android:layout_width="0sp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            >
+            <ImageView
+                android:paddingTop="10dp"
+                android:id="@+id/shoucang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/shoucang"/>
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:background="@null"
+                android:text="收 藏" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:onClick="MyComments"
+            android:orientation="vertical"
+            android:layout_width="0sp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            >
+            <ImageView
+                android:paddingTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/pinglun"/>
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:background="@null"
+                android:text="评 论" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:onClick="MyShare"
+            android:orientation="vertical"
+            android:layout_width="0sp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            >
+            <ImageView
+                android:paddingTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/fenxiang"/>
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:background="@null"
+                android:text="分 享" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
