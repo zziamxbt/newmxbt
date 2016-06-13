@@ -1,5 +1,6 @@
 package com.example.acer.zzia_mxbt.activity;
 
+<<<<<<< HEAD
 import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -18,6 +19,22 @@ import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.EditText;
+=======
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
+import android.net.Uri;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.support.v7.app.AppCompatActivity;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.util.Log;
+import android.view.View;
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -25,10 +42,15 @@ import android.widget.Toast;
 
 import com.example.acer.zzia_mxbt.R;
 import com.example.acer.zzia_mxbt.application.MyApplication;
+<<<<<<< HEAD
 import com.example.acer.zzia_mxbt.bean.ArticleBean;
 import com.example.acer.zzia_mxbt.bean.WalletBean;
 import com.example.acer.zzia_mxbt.utils.InstallPlugin;
 import com.example.acer.zzia_mxbt.utils.Pay;
+=======
+import com.example.acer.zzia_mxbt.bean.WalletBean;
+import com.example.acer.zzia_mxbt.utils.InstallPlugin;
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.google.gson.Gson;
@@ -49,7 +71,10 @@ import java.util.List;
 
 import c.b.BP;
 import c.b.PListener;
+<<<<<<< HEAD
 import c.b.QListener;
+=======
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
 import c.b.Unity;
 
 public class WalletActivity extends AppCompatActivity {
@@ -339,6 +364,7 @@ public class WalletActivity extends AppCompatActivity {
 
     private void getTest() {
 
+<<<<<<< HEAD
       /*  Intent intent=getIntent();
         int User_id=intent.getIntExtra("Uid",0);
         Log.e("abc", "getTest: "+User_id );*/
@@ -348,6 +374,17 @@ public class WalletActivity extends AppCompatActivity {
             goldFlag=false;
         }else {
             params.addQueryStringParameter("Uid", 1 + "");
+=======
+        Intent intent=getIntent();
+        int User_id=intent.getIntExtra("Uid",0);
+        Log.e("abc", "getTest: "+User_id );
+        RequestParams params = new RequestParams(mPath);
+        if(goldFlag){
+            params.addQueryStringParameter("User_id", 1 + "");
+            goldFlag=false;
+        }else {
+            params.addQueryStringParameter("User_id", 1 + "");
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
             params.addQueryStringParameter("goldNum",""+(Integer.valueOf(mnine.getText().toString())+Integer.valueOf(mgoldNum.getText().toString())));
         }
 
@@ -424,7 +461,11 @@ public class WalletActivity extends AppCompatActivity {
     //调用支付方法
     public void myPay(String title, final String describe,double price,boolean paytype) {
         /**
+<<<<<<< HEAD
          * 第一个参数是上下文，第二个参数是商品名称,第三个参数是商品描述
+=======
+         * 第一个参数是上下文，第二个参数是商品名称,第三个参数是商品描述                                                                                                        0
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
          * 第四个是商品价格
          * 第5个参数为true时调用支付宝支付，为false时调用微信支付
          */

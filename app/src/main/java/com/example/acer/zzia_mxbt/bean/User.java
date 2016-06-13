@@ -11,22 +11,37 @@ public class User implements Serializable{
     private static final long serialVersionUID = 1L;
     private int Uid;//主键
     private String Uhead;//头像
+<<<<<<< HEAD
     private String Uname;//帐号
     private String Unickname;//昵称
     private String Utoken;//聊天
 
     private String Ubk;//背景图片
+=======
+    private String Ubk;//背景图片
+    private String Uname;//帐号
+    private String Unickname;//昵称
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
     private String Usex;//性别
     private String Ucountry;//国家
     private String Usign;//个性签名
     private String Upassword;//密码
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
     public User(){
 
     }
 
+<<<<<<< HEAD
     public User(int uid, String uhead, String ubk, String uname, String unickname, String usex, String ucountry, String usign, String upassword, String utoken) {
+=======
+    public User(int uid, String uhead, String ubk, String uname, String unickname,
+                 String usex, String ucountry, String usign, String upassword) {
+        super();
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
         Uid = uid;
         Uhead = uhead;
         Ubk = ubk;
@@ -36,11 +51,14 @@ public class User implements Serializable{
         Ucountry = ucountry;
         Usign = usign;
         Upassword = upassword;
+<<<<<<< HEAD
         Utoken = utoken;
     }
 
     public static long getSerialVersionUID() {
         return serialVersionUID;
+=======
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
     }
 
     public int getUid() {
@@ -115,16 +133,22 @@ public class User implements Serializable{
         Upassword = upassword;
     }
 
+<<<<<<< HEAD
     public String getUtoken() {
         return Utoken;
     }
 
     public void setUtoken(String utoken) {
         Utoken = utoken;
+=======
+    public static long getSerialversionuid() {
+        return serialVersionUID;
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
     }
 
     @Override
     public String toString() {
+<<<<<<< HEAD
         return "User{" +
                 "Uid=" + Uid +
                 ", Uhead='" + Uhead + '\'' +
@@ -138,4 +162,12 @@ public class User implements Serializable{
                 ", Utoken='" + Utoken + '\'' +
                 '}';
     }
+=======
+        return "Users [Uid=" + Uid + ", Uhead=" + Uhead + ", Ubk=" + Ubk
+                + ", Uname=" + Uname + ", Unickname=" + Unickname + ", Usex="
+                + Usex + ", Ucountry=" + Ucountry + ", Usign=" + Usign
+                + ", Upassword=" + Upassword + "]";
+    }
+
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
 }

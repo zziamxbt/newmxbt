@@ -32,8 +32,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Write_ReadActivity extends AppCompatActivity {
+<<<<<<< HEAD
     //续写id
     private int AWid;
+=======
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
     //Xutil的 RequestParams params
     private RequestParams params;
     // 投票和关注flag以及图片
@@ -58,9 +61,15 @@ public class Write_ReadActivity extends AppCompatActivity {
     private int voteNum = 1;
     //是否点击举报
     private int focusNum = 2;
+<<<<<<< HEAD
     //用户id
     private int User_id;
     public static final String action = "com.zzia_mxbt";
+=======
+  //用户id
+  private int User_id;
+
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -121,16 +130,20 @@ public class Write_ReadActivity extends AppCompatActivity {
                 getTest(voteNum, false);
                 mVote_image.setImageResource(R.drawable.toupiao);
                 mWrite_readBeanList.get(0).setVoteFlag(false);
+<<<<<<< HEAD
                 Intent intent=new Intent(action);
                 intent.putExtra("message","false");
                 intent.putExtra("AWid",AWid);
                 sendBroadcast(intent);
 
+=======
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
                 Toast.makeText(Write_ReadActivity.this, "取消投票", Toast.LENGTH_SHORT).show();
             } else {
                 getTest(voteNum, true);
                 mVote_image.setImageResource(R.drawable.toupiao_success);
                 mWrite_readBeanList.get(0).setVoteFlag(true);
+<<<<<<< HEAD
                 Intent intent=new Intent(action);
                 intent.putExtra("message","true");
                 intent.putExtra("AWid",AWid);
@@ -139,6 +152,11 @@ public class Write_ReadActivity extends AppCompatActivity {
             }
         }
 
+=======
+                Toast.makeText(Write_ReadActivity.this, "已投票", Toast.LENGTH_SHORT).show();
+            }
+        }
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
     }
 
     //评论监听
@@ -188,8 +206,13 @@ public class Write_ReadActivity extends AppCompatActivity {
         //第一步：设置访问路径
 
         Intent intent = getIntent();
+<<<<<<< HEAD
         AWid = intent.getIntExtra("AWid", 0);
         User_id=intent.getIntExtra("User_id",1);
+=======
+        int AWid = intent.getIntExtra("AWid", 0);
+        User_id=intent.getIntExtra("User_id",0);
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
         Log.e("abc", "getTest: " + AWid);
         params = new RequestParams(mPath);
         if(User_id==0){

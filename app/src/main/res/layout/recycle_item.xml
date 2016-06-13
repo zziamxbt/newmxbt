@@ -46,6 +46,7 @@
       <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+<<<<<<< HEAD
           <LinearLayout
               android:layout_width="match_parent"
               android:layout_height="match_parent"
@@ -59,6 +60,15 @@
                   android:layout_width="match_parent"
                   android:layout_height="wrap_content"
                   />
+=======
+          <com.facebook.drawee.view.SimpleDraweeView
+              android:id="@+id/vote_coverimg"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+
+
+              />
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
           <TextView
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
@@ -67,6 +77,7 @@
               android:text="再见吧，朋友"
               android:layout_marginTop="10dp"
               android:layout_marginBottom="5dp"
+<<<<<<< HEAD
 
               />
          <LinearLayout
@@ -91,6 +102,30 @@
                    />
              </LinearLayout>
           </LinearLayout>
+=======
+              android:layout_centerHorizontal="true"
+              android:layout_below="@+id/vote_coverimg"/>
+          <ImageView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:id="@+id/vote_good"
+              android:src="@drawable/vote_good"
+              android:layout_alignParentRight="true"
+              android:layout_marginRight="30dp"
+              android:layout_alignTop="@+id/vote_num"
+              android:layout_alignBottom="@+id/vote_num"
+
+               />
+           <TextView android:id="@+id/vote_num"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+               android:text="投票数"
+               android:gravity="right"
+              android:textColor="@color/material_deep_teal_500"
+               android:layout_below="@+id/vote_title"
+               android:layout_alignParentLeft="true"
+               android:layout_alignParentStart="true" />
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
 
        </RelativeLayout>
     </LinearLayout>

@@ -46,8 +46,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="编辑资料"
+<<<<<<< HEAD
                     android:layout_marginLeft="280dp"
                     android:layout_marginTop="21dp"
+=======
+                   android:layout_gravity="right"
+                    android:paddingRight="16dp"
+                    android:paddingTop="16dp"
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
                     app:layout_collapseMode="pin"
 
                     />

@@ -1,5 +1,6 @@
 package com.example.acer.zzia_mxbt.activity;
 
+<<<<<<< HEAD
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
@@ -30,10 +31,20 @@ ListView listView;
     String Unickname;
     String Akind;
     String Atitle;
+=======
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+
+import com.example.acer.zzia_mxbt.R;
+
+public class DownlineActivity extends AppCompatActivity {
+
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_downline);
+<<<<<<< HEAD
         initview();
        initdatabase();
         initlistner();
@@ -85,5 +96,7 @@ ListView listView;
                 startActivity(intent);
             }
         });
+=======
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
     }
 }

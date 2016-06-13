@@ -78,7 +78,10 @@ static String data;
                 Intent intent=new Intent();
                 intent.setClass(getActivity(), Article_ReadActivity.class);
                 intent.putExtra("Article_Id",list.get(position).getAid());
+<<<<<<< HEAD
                 Log.e("Article_Id",list.get(position).getAid()+"");
+=======
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
                 startActivity(intent);
             }
         });

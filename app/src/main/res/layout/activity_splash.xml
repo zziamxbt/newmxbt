@@ -4,12 +4,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+<<<<<<< HEAD
+=======
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
     tools:context="com.example.acer.zzia_mxbt.activity.SplashActivity">
    <ImageView
        android:layout_width="match_parent"
        android:layout_height="0dp"
        android:layout_weight="1"
+<<<<<<< HEAD
        android:scaleType="fitXY"
+=======
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
        android:src="@drawable/lead_image"/>
 
 

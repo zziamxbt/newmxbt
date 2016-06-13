@@ -1,9 +1,13 @@
 package com.example.acer.zzia_mxbt.activity;
 
 
+<<<<<<< HEAD
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+=======
+import android.content.Intent;
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
@@ -48,7 +52,13 @@ import com.facebook.drawee.interfaces.DraweeController;
 import com.facebook.drawee.view.SimpleDraweeView;
 
 
+<<<<<<< HEAD
 import java.util.ArrayList;
+=======
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
 import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -56,6 +66,15 @@ import java.util.TimerTask;
 import cn.jpush.android.api.JPushInterface;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+<<<<<<< HEAD
+=======
+
+    private static final int USER_REQUEST_COD = 1;
+
+    //判断是否已经签到
+    private boolean signFlag=true;
+
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
     DrawerLayout drawer;
     ViewPager index_viewPager;
     ImageView index_menu;//导航菜单按钮
@@ -104,7 +123,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private static  boolean isLogin = false;
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
     public static User getUser() {
         return user;
     }
@@ -119,19 +141,32 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     Boolean isExit =false;
     //更多按钮
     ImageView more;
+<<<<<<< HEAD
     //清空偏好设置
     SharedPreferences mSharedPreferencesUser;//偏好设置,保存后台传来的用户信息
     public static final String SAVEUSER = "save_user";//偏好设置，保存用户所有信息
     SharedPreferences.Editor mEditorUser;//偏好设置保存信息
+=======
+
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Fresco.initialize(MainActivity.this);
+<<<<<<< HEAD
         setContentView(R.layout.activity_main);
 //        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 //        setSupportActionBar(toolbar);
        // JPushInterface.setDebugMode(true);
         JPushInterface.init(this);
+=======
+       JPushInterface.init(this);
+        setContentView(R.layout.activity_main);
+//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+//        setSupportActionBar(toolbar);
+        JPushInterface.setDebugMode(true);
+
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
         getLoginParam();
         initView();
         initData();
@@ -141,8 +176,21 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+<<<<<<< HEAD
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+=======
+                if(isLogin==true) {
+                    Intent intent = new Intent(MainActivity.this, CreateAticle.class);
+                    Bundle bundle = new Bundle();
+                    bundle.putSerializable("user", user);
+                    intent.putExtras(bundle);
+                    startActivity(intent);
+                }else{
+                    Intent intent = new Intent(MainActivity.this, QiyuActivity.class);
+                    startActivity(intent);
+                }
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
             }
         });
 
@@ -233,8 +281,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             Toast.makeText(MainActivity.this, "发现", Toast.LENGTH_SHORT).show();
         } else if (id == R.id.side_message) {
             Toast.makeText(MainActivity.this, "消息中心", Toast.LENGTH_SHORT).show();
+<<<<<<< HEAD
                 Intent intent=new Intent(this,MessageActivity.class);
                 startActivity(intent);
+=======
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
         } else if (id == R.id.side_collect) {
             Toast.makeText(MainActivity.this, "我的收藏", Toast.LENGTH_SHORT).show();
         } else if (id == R.id.side_recentread) {
@@ -258,6 +309,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             Toast.makeText(MainActivity.this, "夜间模式", Toast.LENGTH_SHORT).show();
         } else if (id == R.id.side_quit) {
             isLogin = false;
+<<<<<<< HEAD
             mSharedPreferencesUser = getSharedPreferences(SAVEUSER, MODE_PRIVATE);
             mEditorUser = mSharedPreferencesUser.edit();
             mEditorUser.remove("Uid");
@@ -267,6 +319,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             mEditorUser.remove("Utoken");
             mEditorUser.commit();
             Log.e("AAAAAAAAA","偏好设置清除完毕");
+=======
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
             Intent intent = new Intent(MainActivity.this, QiyuActivity.class);
             startActivity(intent);
             Toast.makeText(MainActivity.this, "退出登录", Toast.LENGTH_SHORT).show();
@@ -393,7 +447,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     bundle.putSerializable("user", user);
                     bundle.putBoolean("isLogin", true);
                     intent.putExtras(bundle);
+<<<<<<< HEAD
                     startActivity(intent);
+=======
+                    startActivityForResult(intent, USER_REQUEST_COD);
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
                     Toast.makeText(MainActivity.this, "您自己的头像被点击了！", Toast.LENGTH_SHORT).show();
                 } else {
                     //未登录
@@ -411,13 +469,21 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 PopupWindow popupWindow;
                 View view;
                 view = layoutInflater.inflate(R.layout.index_drop_down, null);
+<<<<<<< HEAD
                 TextView drop1, drop2, drop3;
+=======
+                final TextView drop1, drop2, drop3;
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
                 drop1 = (TextView) view.findViewById(R.id.drop1);
                 drop2 = (TextView) view.findViewById(R.id.drop2);
                 drop3 = (TextView) view.findViewById(R.id.drop3);
 
                 drop1.setText("排行榜");
+<<<<<<< HEAD
                 drop2.setText("2");
+=======
+                drop2.setText("签到");
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
                 drop3.setText("3");
 
 
@@ -426,6 +492,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 popupWindow.setOutsideTouchable(true);
                 popupWindow.showAsDropDown(more, -230, 20);
                 popupWindow.setAnimationStyle(R.style.anim_menu_animation);
+<<<<<<< HEAD
+=======
+                //排行榜监听
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
                 drop1.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -434,6 +504,24 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         startActivity(intent);
                     }
                 });
+<<<<<<< HEAD
+=======
+                //签到监听
+                drop2.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if(signFlag){
+                            Log.e("isSignFlag","isSignFlag:"+isSignFlag());
+                            Toast.makeText(MainActivity.this,"签到成功，送你2个金币",Toast.LENGTH_LONG).show();
+                            drop2.setText("已签到");
+                            signFlag=false;
+                        }else {
+                            Toast.makeText(MainActivity.this,"你已签到，请明天再来",Toast.LENGTH_LONG).show();
+                        }
+
+                    }
+                });
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
             }
         });
     }
@@ -493,5 +581,30 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
         return false;
     }
+<<<<<<< HEAD
+=======
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == USER_REQUEST_COD && null != data) {
+            user = (User) data.getSerializableExtra("user");
+            userName.setText(user.getUnickname());
+            Uri uri = Uri.parse(user.getUhead());
+            DraweeController controller = Fresco.newDraweeControllerBuilder()
+                    .setUri(uri)
+                    .build();
+            headimg.setController(controller);
+        }
+
+    }
+    //用来判断是否可以再次签到
+    public String isSignFlag(){
+        SimpleDateFormat    formatter    =   new SimpleDateFormat("yyyy年MM月dd日");
+        Date curDate    =   new    Date(System.currentTimeMillis());//获取当前时间
+        String    str    =    formatter.format(curDate);
+        return str;
+
+    }
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
 
 }

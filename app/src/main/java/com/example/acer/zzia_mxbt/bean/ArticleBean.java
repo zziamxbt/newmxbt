@@ -3,12 +3,19 @@ package com.example.acer.zzia_mxbt.bean;
 import java.util.List;
 
 public class ArticleBean {
+<<<<<<< HEAD
+=======
+    private List<Integer> user_id;//文章章节的作者
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
     private List<String> author_chapter_name;//文章章节的作者
     private List<String> chapter_content;//文章章节的内容
     private List<String> chapter_number;//文章章节的章节号
     private List<String> create_chapter_time;//创建文章章节时间
     private List<String> author_chapter_head;//文章章节作者的头像
+<<<<<<< HEAD
     private String author_Uname;  //文章作者的手机号
+=======
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
     private int chapter_id; //章节id
     private String author_name;  //文章的作者
     private String article_chapter;  //文章的章节
@@ -35,7 +42,11 @@ public class ArticleBean {
                        List<String> author_chapter_name, List<String> chapter_content,
                        List<String> chapter_number, List<String> create_chapter_time
             , List<String> author_chapter_head, int chapter_id,
+<<<<<<< HEAD
                        boolean recommandFalg, boolean collectFalg, String author_Uname) {
+=======
+                       boolean recommandFalg, boolean collectFalg,List<Integer> user_id) {
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
         super();
         this.author_name = author_name;
         this.article_chapter = article_chapter;
@@ -55,6 +66,7 @@ public class ArticleBean {
         this.chapter_id = chapter_id;
         this.recommandFalg = recommandFalg;
         this.collectFalg = collectFalg;
+<<<<<<< HEAD
         this.author_Uname = author_Uname;
     }
 
@@ -69,25 +81,58 @@ public class ArticleBean {
     }
 
 
+=======
+        this.user_id=user_id;
+    }
+
+
+    public List<Integer> getUser_id() {
+        return user_id;
+    }
+
+    public void setUser_id(List<Integer> user_id) {
+        this.user_id = user_id;
+    }
+
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
     public boolean isRecommandFalg() {
         return recommandFalg;
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
     public void setRecommandFalg(boolean recommandFalg) {
         this.recommandFalg = recommandFalg;
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
     public boolean isCollectFalg() {
         return collectFalg;
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
     public void setCollectFalg(boolean collectFalg) {
         this.collectFalg = collectFalg;
     }
 
+<<<<<<< HEAD
+=======
+    public int getChapter_id() {
+        return chapter_id;
+    }
+
+    public void setChapter_id(int chapter_id) {
+        this.chapter_id = chapter_id;
+    }
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
 
     public List<String> getAuthor_chapter_head() {
         return author_chapter_head;
@@ -223,6 +268,7 @@ public class ArticleBean {
         this.reader_number = reader_number;
     }
 
+<<<<<<< HEAD
     public int getChapter_id() {
         return chapter_id;
     }
@@ -231,6 +277,8 @@ public class ArticleBean {
     public void setChapter_id(int chapter_id) {
         this.chapter_id = chapter_id;
     }
+=======
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
 
     @Override
     public String toString() {
@@ -240,8 +288,11 @@ public class ArticleBean {
                 ", chapter_number=" + chapter_number +
                 ", create_chapter_time=" + create_chapter_time +
                 ", author_chapter_head=" + author_chapter_head +
+<<<<<<< HEAD
                 ", author_Uname='" + author_Uname + '\'' +
                 ", chapter_id=" + chapter_id +
+=======
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
                 ", author_name='" + author_name + '\'' +
                 ", article_chapter='" + article_chapter + '\'' +
                 ", article_cover='" + article_cover + '\'' +
@@ -252,8 +303,15 @@ public class ArticleBean {
                 ", author_sex='" + author_sex + '\'' +
                 ", focus_number=" + focus_number +
                 ", reader_number=" + reader_number +
+<<<<<<< HEAD
                 ", recommandFalg=" + recommandFalg +
                 ", collectFalg=" + collectFalg +
                 '}';
     }
+=======
+                ", user_id=" + user_id +
+                '}';
+    }
+
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
 }

@@ -4,7 +4,10 @@ import android.animation.ObjectAnimator;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
+<<<<<<< HEAD
 import android.content.SharedPreferences;
+=======
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -38,7 +41,10 @@ import com.example.acer.zzia_mxbt.application.MyApplication;
 import com.example.acer.zzia_mxbt.bean.ArticleBean;
 import com.example.acer.zzia_mxbt.bean.JavaBean_article;
 import com.example.acer.zzia_mxbt.bean.JavaBean_chapter;
+<<<<<<< HEAD
 import com.example.acer.zzia_mxbt.bean.user_info;
+=======
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
 import com.example.acer.zzia_mxbt.utils.SetPicture;
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.facebook.drawee.view.SimpleDraweeView;
@@ -61,9 +67,12 @@ import java.util.List;
 
 import cn.sharesdk.framework.ShareSDK;
 import cn.sharesdk.onekeyshare.OnekeyShare;
+<<<<<<< HEAD
 import io.rong.imkit.RongIM;
 import io.rong.imlib.RongIMClient;
 import io.rong.imlib.model.UserInfo;
+=======
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
 
 public class Article_ReadActivity extends AppCompatActivity {
     //接受上下文
@@ -151,11 +160,16 @@ public class Article_ReadActivity extends AppCompatActivity {
     Bitmap mcoverimg=null;
     int Uid=2;//数据待接收。。。。。。。。。。。。。。。。。。。。。
     SQLiteDatabase db=null;
+<<<<<<< HEAD
 //读取当前用户信息
 public static final String SAVEUSER = "save_user";//偏好设置，保存用户所有信息
     SharedPreferences mSharedPreferencesUser;//偏好设置,保存后台传来的用户信息
     String Uid2, Uhead, Uname, Unickname, Utoken;
     List<user_info> listdata;
+=======
+
+
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -408,6 +422,11 @@ public static final String SAVEUSER = "save_user";//偏好设置，保存用户�
             mJavaBean_article.setChapterAuthorName(listData.get(0).getAuthor_chapter_name().get(i - 1));
             mJavaBean_article.setArticleTime(listData.get(0).getCreate_chapter_time().get(i - 1));
             mJavaBean_article.setmAuthor_portraits(listData.get(0).getAuthor_chapter_head().get(i - 1));
+<<<<<<< HEAD
+=======
+            mJavaBean_article.setAuthorId(listData.get(0).getUser_id().get(i-1));
+            mJavaBean_article.setUserId(User_Id);
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
             mArticleList.add(mJavaBean_article);
             //封面简介赋值
         }
@@ -549,6 +568,7 @@ public static final String SAVEUSER = "save_user";//偏好设置，保存用户�
     //foot的e_mail监听
     public void Foot_e_mail(View view) {
         Toast.makeText(Article_ReadActivity.this, "你点击了foot的e_mail", Toast.LENGTH_SHORT).show();
+<<<<<<< HEAD
        //启动会话界面，设置用户token，昵称
         //获取当前用户基本信息
         usermessage();
@@ -626,6 +646,10 @@ public static final String SAVEUSER = "save_user";//偏好设置，保存用户�
     }
 
 
+=======
+    }
+
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
     //foot的addfriend监听
     public void Foot_addfriend(View view) {
         Toast.makeText(Article_ReadActivity.this, "你点击了foot的Foot_addfriend", Toast.LENGTH_SHORT).show();
@@ -704,6 +728,14 @@ public static final String SAVEUSER = "save_user";//偏好设置，保存用户�
 
     }
 
+<<<<<<< HEAD
+=======
+    //举报文章监听
+    public void Report(View view){
+
+    }
+
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
 
     public void createdatabase() {
 
@@ -812,12 +844,15 @@ public static final String SAVEUSER = "save_user";//偏好设置，保存用户�
 
     }
 
+<<<<<<< HEAD
     //分享监听
 
 
 
 
 
+=======
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
     private void showShare() {
         ShareSDK.initSDK(this);
         OnekeyShare oks = new OnekeyShare();
@@ -885,8 +920,12 @@ public static final String SAVEUSER = "save_user";//偏好设置，保存用户�
 //获取activity跳转过来的值
         Intent intent= getIntent();
         int article_id = intent.getIntExtra("Article_Id",0);
+<<<<<<< HEAD
         User_Id =intent.getIntExtra("User_Id",0);
         Log.e("article_id", "article_id: " + article_id);
+=======
+        User_Id =intent.getIntExtra("User_Id",1);
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
         //   int User_Id=0;
         params = new RequestParams(mPath);
         if(User_Id==0){
@@ -933,11 +972,15 @@ public static final String SAVEUSER = "save_user";//偏好设置，保存用户�
                     Type type = new TypeToken<List<ArticleBean>>() {
                     }.getType();
                     listData = gson.fromJson(result, type);
+<<<<<<< HEAD
                     Log.e("listData", "listData: " + listData.get(0).getAuthor_Uname());
+=======
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
                     initdata(listData);
                     Log.e("listData", "listData: " + listData);
                 }
 
+<<<<<<< HEAD
 
 
 
@@ -945,6 +988,8 @@ public static final String SAVEUSER = "save_user";//偏好设置，保存用户�
                 //    initdata(list);
           /*      mArticleList.notify();*/
 
+=======
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
             }
 
             @Override

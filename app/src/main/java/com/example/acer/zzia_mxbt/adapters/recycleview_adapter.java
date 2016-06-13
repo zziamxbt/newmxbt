@@ -1,5 +1,6 @@
 package com.example.acer.zzia_mxbt.adapters;
 
+<<<<<<< HEAD
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
@@ -7,6 +8,11 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.AsyncTask;
+=======
+import android.content.Context;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
 import android.os.Handler;
 import android.os.Message;
 import android.support.v7.widget.RecyclerView;
@@ -23,13 +29,17 @@ import com.example.acer.zzia_mxbt.R;
 import com.example.acer.zzia_mxbt.activity.VoteActivity;
 import com.example.acer.zzia_mxbt.bean.vote_content;
 import com.facebook.drawee.backends.pipeline.Fresco;
+<<<<<<< HEAD
 import com.facebook.drawee.drawable.ScalingUtils;
+=======
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
 import com.facebook.drawee.generic.GenericDraweeHierarchy;
 import com.facebook.drawee.generic.GenericDraweeHierarchyBuilder;
 import com.facebook.drawee.generic.RoundingParams;
 import com.facebook.drawee.interfaces.DraweeController;
 import com.facebook.drawee.view.SimpleDraweeView;
 
+<<<<<<< HEAD
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -37,6 +47,11 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
+=======
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
 import java.util.List;
 
 
@@ -48,6 +63,7 @@ public class recycleview_adapter extends RecyclerView.Adapter<recycleview_adapte
     Context context;
     static int width;
     static int height;
+<<<<<<< HEAD
     List<Integer> data;
     public recycleview_adapter(List<vote_content> list, Context context) {
         this.list = list;
@@ -57,6 +73,15 @@ public class recycleview_adapter extends RecyclerView.Adapter<recycleview_adapte
 
 
 
+=======
+    static  int data=0;
+    static boolean flag=false;
+   int Uid=0;
+    public recycleview_adapter(List<vote_content> list, Context context) {
+        this.list = list;
+        this.context=context;
+    }
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
     private OnRecyclerViewItemClickListener mOnItemClickListener = null;
 
     //define interface
@@ -67,17 +92,46 @@ public class recycleview_adapter extends RecyclerView.Adapter<recycleview_adapte
 
     @Override
     public recycleView onCreateViewHolder(ViewGroup parent, int viewType) {
+<<<<<<< HEAD
         View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.recycle_item, parent,false);
     view.setOnClickListener(this);
     return new recycleView(view);
 
 }
+=======
+        View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.recycle_item, null);
+        view.setOnClickListener(this);
+        return new recycleView(view);
+
+    }
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
 
     @Override
     public void onBindViewHolder(final recycleView holder, final int position) {
         holder.itemView.setTag(position);
 
+<<<<<<< HEAD
 //图片封面设计
+=======
+        GenericDraweeHierarchyBuilder builder = new GenericDraweeHierarchyBuilder(context.getResources());
+        GenericDraweeHierarchy hierarchy = builder
+               // .setActualImageScaleType(ScalingUtils.ScaleType.FIT_CENTER)
+                .setPlaceholderImage(context.getResources().getDrawable(R.drawable.head))
+                .setRoundingParams(new RoundingParams().setRoundAsCircle(true))
+                .build();
+
+
+
+        final Uri uri=Uri.parse(list.get(position).getVote_head());
+
+        DraweeController controller= Fresco.newDraweeControllerBuilder()
+                .setUri(uri)
+                .build();
+
+
+        holder.headimg.setHierarchy(hierarchy);
+        holder.headimg.setController(controller);
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
         final int p =position;
         final Handler handler = new Handler() {
             @Override
@@ -85,10 +139,18 @@ public class recycleview_adapter extends RecyclerView.Adapter<recycleview_adapte
                 super.handleMessage(msg);
                 switch (msg.what){
                     case 1:
+<<<<<<< HEAD
 
                         int[] a = (int[]) msg.obj;
                         float rate;
                         rate = (float) a[0]/(float) a[1];
+=======
+//                        Log.e("AAA","宽"+width);
+//                        Log.e("AAA","高"+height);
+                        int[] a = (int[]) msg.obj;
+                        float rate;
+                            rate = (float) a[0]/(float) a[1];
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
 
                         Uri uri1 = Uri.parse(list.get(p).getVote_coverimg());
                         holder.coverimg.setAspectRatio(rate);
@@ -125,6 +187,7 @@ public class recycleview_adapter extends RecyclerView.Adapter<recycleview_adapte
                 }
             }
         }.start();
+<<<<<<< HEAD
 
 
         GenericDraweeHierarchyBuilder builder = new GenericDraweeHierarchyBuilder(context.getResources());
@@ -140,14 +203,72 @@ public class recycleview_adapter extends RecyclerView.Adapter<recycleview_adapte
                 .build();
         holder.headimg.setHierarchy(hierarchy);
         holder.headimg.setController(controller);
+=======
+//-----------------------------
+
+        holder.vote_zan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if(!list.get(p).isFlag()){
+                    //false表明是第一次点击
+                    Toast.makeText(context,list.get(p).getVote_name()+"事件点击触发",Toast.LENGTH_LONG).show();
+                    holder.vote_zan.setImageResource(R.drawable.gooded);
+                    data=Integer.parseInt(list.get(p).getVote_num())+1;
+                    holder.vote_num.setText(data+"票");
+                    Log.e("DDDDDDDDD",""+data);
+                    //若选中，则执行票数加一操作
+                    VoteActivity as=new VoteActivity();
+                    Message message=new Message();
+                    Message message2=new Message();
+                    message.what=1;
+                    message2.what=2;
+                    message.obj=list.get(p).getUid();
+                    //需要告诉数据库把isvote改为true，加一
+                    message2.obj="false";
+                    Log.e("AAAA",list.get(p).getVote_name());
+                    Log.e("AAAA",""+list.get(p).getUid());
+                    as.handler2.sendMessage(message);
+                    as.handler2.sendMessage(message2);
+                    list.get(p).setFlag(true);
+                }else if(list.get(p).isFlag()){
+                    //表明是第二次点击
+                    holder.vote_zan.setImageResource(R.drawable.vote_good);
+                    //若选中，则执行票数减一操作
+                    data=Integer.parseInt(list.get(p).getVote_num());
+                    holder.vote_num.setText(data+"票");
+                        Log.e("DDDDDDDDD",""+data);
+                    VoteActivity as=new VoteActivity();
+                    Message message=new Message();
+                    Message message3=new Message();
+                    message.what=1;
+                    message3.what=3;
+                    message.obj=list.get(p).getUid();
+                    //告诉数据库用户取消了点赞，改标志位，并减一
+                    message3.obj="true";
+                    as.handler2.sendMessage(message);
+                    as.handler2.sendMessage(message3);
+                    list.get(p).setFlag(false);
+                }
+
+
+            }
+        });
+
+        Uid=list.get(position).getUid();
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
         holder.vote_name.setText(list.get(position).getVote_name());
         holder.vote_publishtime.setText(list.get(position).getVote_publishtime());
         holder.vote_title.setText(list.get(position).getVote_title());
         holder.vote_num.setText(list.get(position).getVote_num()+"票");
 
+<<<<<<< HEAD
    }
 
 
+=======
+    }
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
 
     @Override
     public int getItemCount() {
@@ -189,5 +310,8 @@ public class recycleview_adapter extends RecyclerView.Adapter<recycleview_adapte
 
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
 }
