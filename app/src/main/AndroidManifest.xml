@@ -110,28 +110,18 @@
         <activity android:name=".activity.ThemeActivity" />
         <activity android:name=".activity.ArticleCommentActivity" />
         <activity android:name=".activity.SplashActivity">
+
+        </activity>
+        <activity android:name=".activity.GuideActivity" />
+
+
+        <activity android:name=".activity.WalletActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.GuideActivity" />
-
-        <!-- 第三方支付的activity -->
-
-        <activity
-            android:name="c.b.a.A"
-            android:configChanges="orientation|keyboardHidden|navigation"
-            android:exported="false"
-            android:screenOrientation="behind"
-            android:windowSoftInputMode="adjustResize|stateHidden" />
-        <activity
-            android:name="c.b.a.B"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Translucent" />
-
-        <activity android:name=".activity.WalletActivity" />
         <activity android:name=".activity.EditActivity" />
 
         <!-- 极光推送集成 -->

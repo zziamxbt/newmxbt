@@ -8,6 +8,7 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
 
@@ -36,6 +37,8 @@ import org.xutils.common.Callback;
 import org.xutils.http.RequestParams;
 import org.xutils.x;
 
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.lang.reflect.Type;
@@ -499,7 +502,7 @@ public class WalletActivity extends AppCompatActivity {
                             WalletActivity.this,
                             "监测到你尚未安装支付插件,无法进行支付,请先安装插件(已打包在本地,无流量消耗),安装结束后重新支付",
                             Toast.LENGTH_LONG).show();
-                        // InstallPlugin.installBmobPayPlugin("bp.db");
+                    installBmobPayPlugin("bp.db");
                 } else {
                     Toast.makeText(WalletActivity.this, "支付中断!", Toast.LENGTH_SHORT)
                             .show();
@@ -554,6 +557,33 @@ public class WalletActivity extends AppCompatActivity {
                 dialog.dismiss();
             } catch (Exception e) {
             }
+    }
+
+    void installBmobPayPlugin(String fileName) {
+        try {
+            InputStream is = getAssets().open(fileName);
+            File file = new File(Environment.getExternalStorageDirectory()
+                    + File.separator + fileName + ".apk");
+            if (file.exists())
+                file.delete();
+            file.createNewFile();
+            FileOutputStream fos = new FileOutputStream(file);
+            byte[] temp = new byte[1024];
+            int i = 0;
+            while ((i = is.read(temp)) > 0) {
+                fos.write(temp, 0, i);
+            }
+            fos.close();
+            is.close();
+
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            intent.setDataAndType(Uri.parse("file://" + file),
+                    "application/vnd.android.package-archive");
+            startActivity(intent);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
 }
