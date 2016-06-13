@@ -9,12 +9,20 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+<<<<<<< HEAD
+            <option value="$PROJECT_DIR$/IMKit" />
+=======
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
             <option value="$PROJECT_DIR$/app" />
           </set>
         </option>
         <option name="myModules">
           <set>
             <option value="$PROJECT_DIR$" />
+<<<<<<< HEAD
+            <option value="$PROJECT_DIR$/IMKit" />
+=======
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
             <option value="$PROJECT_DIR$/app" />
           </set>
         </option>

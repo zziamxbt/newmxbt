@@ -10,6 +10,27 @@
 
     
     <RelativeLayout
+<<<<<<< HEAD
+        android:id="@+id/edit_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="6"
+        android:background="#ff00ff"
+        android:paddingTop="10dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        >
+        <ImageView
+            android:id="@+id/edit_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/back"
+            android:layout_alignTop="@+id/edit_text"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+        <TextView
+            android:paddingTop="5dp"
+=======
 
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -34,15 +55,20 @@
             android:layout_marginTop="15dp"
 
 
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
             android:id="@+id/edit_text"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:layout_centerHorizontal="true"
             android:text="修改资料"/>
         <TextView
+<<<<<<< HEAD
+            android:paddingTop="5dp"
+=======
             android:layout_marginTop="15dp"
 
             android:paddingRight="16dp"
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
             android:id="@+id/edit_save"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
@@ -53,7 +79,11 @@
         android:orientation="vertical"
         android:paddingLeft="16dp"
         android:paddingRight="16dp"
+<<<<<<< HEAD
+        android:layout_width="386dp"
+=======
         android:layout_width="match_parent"
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
         android:layout_height="match_parent"
         android:layout_weight="4"     >
         <RelativeLayout
@@ -230,7 +260,11 @@
                 android:layout_height="wrap_content"
                 android:layout_toLeftOf="@id/edit_sign_arrow"
                 android:layout_marginRight="10dp"
+<<<<<<< HEAD
+                android:text="水星"
+=======
                 android:text="我是一个努力干活还不粘人的小妖精"
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
                 />
         </RelativeLayout>
         <LinearLayout

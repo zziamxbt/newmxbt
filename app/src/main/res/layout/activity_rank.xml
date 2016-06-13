@@ -25,10 +25,17 @@
             android:layout_centerHorizontal="true"
             />
         <ImageView
+<<<<<<< HEAD
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/back"
+            android:src="@drawable/back"
+=======
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/back"
             android:src="@drawable/vote_back"
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
             android:layout_marginTop="10dp"
             />
     </RelativeLayout>

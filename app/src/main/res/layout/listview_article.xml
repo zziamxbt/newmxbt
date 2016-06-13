@@ -4,9 +4,13 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+<<<<<<< HEAD
+
+=======
 <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
 <TextView
     android:paddingLeft="20dp"
     android:paddingTop="25dp"
@@ -16,6 +20,9 @@
     android:textStyle="bold"
     android:textSize="15sp"
     android:id="@+id/ChapterTitle"/>
+<<<<<<< HEAD
+
+=======
     <ImageView
         android:id="@+id/ShangCi"
        android:paddingTop="20dp"
@@ -25,6 +32,7 @@
         android:paddingRight="20dp"
         android:src="@drawable/dashang"/>
 </RelativeLayout>
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

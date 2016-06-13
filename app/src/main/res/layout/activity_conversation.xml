@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.7"
+        >
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/back"
+            android:onClick="backevent"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/conversation_title"
+            android:textSize="20sp"
+            android:text="消息中心"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.7">
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:id="@+id/conversation_message"
+            android:textColor="@color/white"
+            android:text="消息"
+            android:paddingTop="10dp"
+            android:paddingLeft="35dp"
+            android:onClick="messageevent"
+            android:layout_marginLeft="54dp"
+            android:layout_marginStart="54dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:id="@+id/conversation_info"
+            android:text="私信"
+            android:paddingTop="10dp"
+            android:paddingLeft="35dp"
+            android:onClick="infoevent"
+            android:layout_marginRight="53dp"
+            android:layout_marginEnd="53dp"
+            android:layout_alignTop="@+id/conversation_message"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6"
+        android:id="@+id/conversation_layout">
+
+    </FrameLayout>
+</LinearLayout>

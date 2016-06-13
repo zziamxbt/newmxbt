@@ -14,17 +14,29 @@ public class JavaBean_article implements Serializable {
     private String ChapterAuthorName;
     private String ArticleContent;
     private String ArticleTime;
+<<<<<<< HEAD
+=======
     private int AuthorId;
     private int UserId;
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
 
     public JavaBean_article(){};
 
     public JavaBean_article(String chapterTitle, String articleTime, String chapterAuthorName, String articleContent
+<<<<<<< HEAD
+    ,String mAuthor_portraits) {
+=======
     ,String mAuthor_portraits,int AuthorId,int UserId) {
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
         ChapterTitle = chapterTitle;
         ArticleTime = articleTime;
         ChapterAuthorName = chapterAuthorName;
         ArticleContent = articleContent;
+<<<<<<< HEAD
+        mAuthor_portraits=mAuthor_portraits;
+    }
+
+=======
         UserId=UserId;
         AuthorId=AuthorId;
         mAuthor_portraits=mAuthor_portraits;
@@ -46,6 +58,7 @@ public class JavaBean_article implements Serializable {
         AuthorId = authorId;
     }
 
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
     public String getmAuthor_portraits() {
         return mAuthor_portraits;
     }

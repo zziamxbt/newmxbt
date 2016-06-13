@@ -36,13 +36,26 @@ dependencies {
     compile name: 'SMSSDK-2.0.2', ext: 'aar'
     compile name: 'SMSSDKGUI-2.0.2', ext: 'aar'
     compile 'com.android.support:appcompat-v7:23+'
+<<<<<<< HEAD
+    //    compile 'com.android.support:design:23.2.1'
+=======
     compile 'com.android.support:appcompat-v7:23.2.1'
     compile 'com.android.support:design:23.2.1'
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
     compile 'com.facebook.fresco:fresco:0.10.0'
     compile 'com.android.support:cardview-v7:23.+'
     compile 'org.xutils:xutils:3.3.34'
     compile 'com.google.code.gson:gson:2.6.2'
     compile 'com.loopeer.android.thirdparty.pulltorefresh:Android-PullToRefresh:2.1.1'
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
+>>>>>>> 909f427a22bef6f1ec40c14c1224720ec811368d
     compile files('libs/umeng_social_sdk.jar')
     compile files('libs/SocialSDK_Sina.jar')
     compile files('libs/SocialSDK_QQZone_3.jar')
@@ -53,10 +66,31 @@ dependencies {
     compile files('libs/MobCommons-2016.0303.1229.jar')
     compile 'com.android.support:recyclerview-v7:23.2.1'
     compile 'com.android.support:recyclerview-v7:23.0.3@aar'
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
+>>>>>>> 909f427a22bef6f1ec40c14c1224720ec811368d
     compile files('libs/android-async-http-1.4.6.jar')
     compile files('libs/qiniu-android-sdk-7.0.3.jar')
     compile 'com.github.bumptech.glide:glide:3.7.0'
     compile files('libs/ShareSDK-Core-2.7.2.jar')
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    compile files('libs/BmobPay_v2.7_160427.jar')
+    compile 'com.android.support:design:23+'
+    compile 'com.android.support:palette-v7:23+'
+    compile 'com.android.support:support-v4:23+'
+    compile files('libs/jpush-android-2.1.5.jar')
+    compile project(':IMKit')
+=======
+
+    compile files('libs/BmobPay_v2.7_160427.jar')
+>>>>>>> 909f427a22bef6f1ec40c14c1224720ec811368d
     compile 'com.android.support:design:23+'
     compile 'com.android.support:cardview-v7:23+'
     compile 'com.android.support:palette-v7:23+'
@@ -64,5 +98,10 @@ dependencies {
     compile files('libs/jpush-android-2.1.5.jar')
     compile files('libs/android-async-http-1.4.6.jar')
     compile files('libs/qiniu-android-sdk-7.0.3.jar')
+<<<<<<< HEAD
     compile files('libs/BmobPay_v3.0.2_160531.jar')
+=======
+
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
+>>>>>>> 909f427a22bef6f1ec40c14c1224720ec811368d
 }

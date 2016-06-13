@@ -12,24 +12,60 @@
         android:name="com.example.acer.zzia_mxbt.permission.JPUSH_MESSAGE"
         android:protectionLevel="signature" />
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    <!-- 第三方支付的权限 -->
+
+
+    <!-- Required 一些系统要求的权限，如访问网络等 -->
+
+    <uses-permission android:name="com.example.acer.zzia_mxbt.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+=======
+
+>>>>>>> 909f427a22bef6f1ec40c14c1224720ec811368d
     <uses-permission android:name="com.example.acer.zzia_mxbt.permission.JPUSH_MESSAGE" />
     <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+<<<<<<< HEAD
+=======
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
+>>>>>>> 909f427a22bef6f1ec40c14c1224720ec811368d
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+=======
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
+>>>>>>> 909f427a22bef6f1ec40c14c1224720ec811368d
     <!-- Optional for location -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+<<<<<<< HEAD
      <!-- Mob网络权限 -->
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.RECEIVE_SMS" />
@@ -37,11 +73,72 @@
     <!-- 读写权限 -->
     <uses-permission android:name="android.permission.WRITEEXTERNALSTORAGE" />
      <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+=======
+
+    <!-- 第三方支付的权限 -->
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
+    <!-- Mob网络权限 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+<<<<<<< HEAD
+=======
+
+    <!-- 读写权限 -->
+    <uses-permission android:name="android.permission.WRITEEXTERNALSTORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
+    <!-- 友盟要求 -->
+
+
+    <!-- ###################声明SDK使用的相关权限###################### -->
+    <!-- 检测网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 获取mac地址作为用户的备用唯一标识 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 获取用户手机的IMEI，用来唯一的标识用户 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 缓存资源优先存入SDcard -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 允许应用程序联网，以便向我们的服务器端发送数据 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- QQ、QQ空间所需权限 -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 分享权限 -->
+
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+>>>>>>> 909f427a22bef6f1ec40c14c1224720ec811368d
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <!-- 蓝牙分享所需的权限 -->
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 9520d40836af1534f47bedf6f1caafae5a9e5a8c
+>>>>>>> 26efadd7082c159a74806439998f4ba56ea4a837
+>>>>>>> 7486ff674008437d0cb85be343bef918207db514
+>>>>>>> dd098caccbfc824327a696aefd7d4be94787cc08
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
+>>>>>>> 909f427a22bef6f1ec40c14c1224720ec811368d
     <application
         android:name=".application.MyApplication"
         android:allowBackup="true"
@@ -49,8 +146,16 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
+<<<<<<< HEAD
+        <activity android:name=".activity.MainActivity">
+
+            <!-- 记得把主函数改过来 -->
+
+        </activity>
+=======
 
         <activity android:name=".activity.Article_ReadActivity" />
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
         <activity android:name=".activity.LoginActivity" />
         <activity android:name=".activity.ProtocolActivity" />
         <activity android:name=".activity.QiyuActivity" />
@@ -60,6 +165,10 @@
         <activity android:name=".activity.RankActivity" />
         <!-- 投票页面VoteActivity -->
         <activity android:name=".activity.VoteActivity" />
+<<<<<<< HEAD
+
+=======
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
         <!--
             <activity
             android:name="com.mob.tools.MobUIShell"
@@ -67,6 +176,11 @@
             android:theme="@android:style/Theme.Translucent.NoTitleBar"
             android:windowSoftInputMode="stateHidden|adjustResize" />
         -->
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
         <!-- ###################注册SDK使用的Activity###################### -->
         <!-- 分享编辑页 -->
         <activity
@@ -102,7 +216,14 @@
             android:name="UMENG_APPKEY"
             android:value="573329d1e0f55aea7500430f" />
 
+<<<<<<< HEAD
         <activity android:name=".activity.MainActivity" />
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
+>>>>>>> 909f427a22bef6f1ec40c14c1224720ec811368d
         <activity android:name=".activity.CenterActivity" />
         <activity android:name=".activity.Write_ReadActivity" />
         <activity android:name=".activity.ThemeContentActivity" />
@@ -113,7 +234,39 @@
 
         </activity>
         <activity android:name=".activity.GuideActivity" />
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+        <activity android:name=".activity.Article_ReadActivity" />
+        <!-- 第三方支付的activity -->
+
+=======
+        <!-- 第三方支付的activity -->
+
+
+
+
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
+        <activity
+            android:name="c.b.a.A"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="c.b.a.B"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent" />
+<<<<<<< HEAD
+        <activity android:name=".activity.WalletActivity" />
+        <activity android:name=".activity.EditActivity" />
+        <activity android:name=".activity.SearchActivity" />
+        <activity android:name=".activity.LableActivity" />
+        <activity android:name=".activity.LableContentActivity" />
+        <activity android:name=".activity.DownlineActivity" />
+=======
+>>>>>>> 909f427a22bef6f1ec40c14c1224720ec811368d
 
         <activity android:name=".activity.WalletActivity" >
             <intent-filter>
@@ -133,8 +286,24 @@
         <activity android:name=".activity.LableActivity" />
         <activity android:name=".activity.LableContentActivity"></activity>
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
+
+        <!-- 极光推送集成 -->
+        <!-- Required SDK核心功能 -->
+
+<<<<<<< HEAD
+=======
+
+
+         <!--极光推送集成-->
+>>>>>>> 909f427a22bef6f1ec40c14c1224720ec811368d
         <!-- Required SDK核心功能-->
 
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
         <activity
             android:name="cn.jpush.android.ui.PushActivity"
             android:configChanges="orientation|keyboardHidden"
@@ -149,7 +318,10 @@
         </activity>
         <activity android:name=".activity.AndWriteCommentActivity" />
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
         <!-- 分享添加 -->
         <activity
             android:name="com.mob.tools.MobUIShell"
@@ -182,13 +354,20 @@
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
         <!-- Required SDK核心功能 -->
         <service
             android:name="cn.jpush.android.service.DownloadService"
             android:enabled="true"
+<<<<<<< HEAD
+            android:exported="false" />
+=======
             android:exported="false"></service>
 
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
 
         <!-- Required SDK 核心功能 -->
         <!-- option since 2.0.5 可配置PushService，DaemonService,PushReceiver,AlarmReceiver的android:process参数 将JPush相关组件设置为一个独立进程 -->
@@ -261,6 +440,13 @@
         -->
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
+>>>>>>> 909f427a22bef6f1ec40c14c1224720ec811368d
         <!-- Required . Enable it you can get statistics data with channel -->
         <meta-data
             android:name="JPUSH_CHANNEL"
@@ -269,7 +455,28 @@
             android:name="JPUSH_APPKEY"
             android:value="0df39e6620b17589afd021a6" />
         <!-- </>值来自开发者平台取得的AppKey -->
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+        <activity android:name=".activity.DownlineContentActivity" />
+        <activity android:name=".activity.MessageActivity" />
+        <activity android:name=".activity.ConversationActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.example.acer.zzia_mxbt"
+                    android:pathPrefix="/conversation/"
+                    android:scheme="rong" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.UserinfoActivity"></activity>
+=======
+>>>>>>> 909f427a22bef6f1ec40c14c1224720ec811368d
         <activity android:name=".activity.EditNickname" />
         <activity android:name=".activity.EditCountry" />
         <activity android:name=".activity.EditSign" />
@@ -278,6 +485,7 @@
         <activity android:name=".activity.ContentCreateActivity"></activity>
         <activity android:name=".activity.DownlineActivity"></activity>
 
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
     </application>
 
 </manifest>

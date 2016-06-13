@@ -2,6 +2,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+<<<<<<< HEAD
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+=======
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
     android:orientation="vertical">
     <RelativeLayout
         android:layout_width="match_parent"
@@ -11,42 +15,109 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:id="@+id/downline_back"
+<<<<<<< HEAD
+            android:src="@drawable/back"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+=======
             android:src="@drawable/back"/>
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/downline_tt"
+<<<<<<< HEAD
+            android:text="离线阅读"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="20sp"/>
+=======
             android:text="离线阅读"/>
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
     </RelativeLayout>
 
    <RelativeLayout
        android:layout_width="match_parent"
        android:layout_height="0dp"
        android:layout_weight="6">
+<<<<<<< HEAD
+       <com.example.acer.zzia_mxbt.utils.RoundImageview
+           android:layout_width="40dp"
+           android:layout_height="40dp"
+           android:id="@+id/downline_head"
+           android:src="@drawable/bb"
+           android:scaleType="fitXY"
+           app:roundwidth="20dp"
+           app:roundheight="20dp"
+           android:layout_alignTop="@+id/downline_name"
+           android:layout_alignParentLeft="true"
+           android:layout_alignParentStart="true"
+           android:layout_marginLeft="28dp"
+           android:layout_marginStart="28dp" />
+=======
        <com.facebook.drawee.view.SimpleDraweeView
            android:layout_width="40dp"
            android:layout_height="40dp"
            android:id="@+id/downline_head"/>
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
        <TextView
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
            android:id="@+id/downline_name"
+<<<<<<< HEAD
+           android:text="杨顺顺"
+           android:layout_marginTop="31dp"
+           android:layout_alignParentTop="true"
+           android:layout_toRightOf="@+id/downline_head"
+           android:layout_toEndOf="@+id/downline_head"
+           android:layout_marginLeft="30dp"
+           android:layout_marginStart="30dp" />
+=======
            android:text="杨顺顺"/>
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
        <TextView
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
            android:id="@+id/downline_kind"
+<<<<<<< HEAD
+           android:text="创作"
+           android:layout_marginRight="34dp"
+           android:layout_marginEnd="34dp"
+           android:layout_below="@+id/downline_name"
+           android:layout_alignParentRight="true"
+           android:layout_alignParentEnd="true" />
+       <ImageView
+           android:layout_width="match_parent"
+           android:layout_height="150dp"
+           android:id="@+id/downline_coverimg"
+           android:scaleType="fitXY"
+           android:layout_marginTop="33dp"
+           android:layout_below="@+id/downline_head"
+           android:layout_alignParentLeft="true"
+           android:layout_alignParentStart="true"
+           android:src="@drawable/fengjing"/>
+=======
            android:text="创作"/>
        <com.facebook.drawee.view.SimpleDraweeView
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
            android:id="@+id/downline_coverimg"
            />
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
        <TextView
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
            android:id="@+id/downline_title"
+<<<<<<< HEAD
+           android:text="醉画仙"
+           android:layout_marginTop="35dp"
+           android:layout_below="@+id/downline_coverimg"
+           android:layout_toRightOf="@+id/downline_name"
+           android:layout_toEndOf="@+id/downline_name" />
+=======
            android:text="醉画仙"/>
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
    </RelativeLayout>
 
 

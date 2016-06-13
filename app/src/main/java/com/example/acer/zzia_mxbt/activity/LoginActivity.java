@@ -17,6 +17,10 @@ import android.widget.Toast;
 import com.example.acer.zzia_mxbt.R;
 import com.example.acer.zzia_mxbt.application.MyApplication;
 import com.example.acer.zzia_mxbt.bean.User;
+<<<<<<< HEAD
+import com.example.acer.zzia_mxbt.bean.user_info;
+=======
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.umeng.socialize.bean.SHARE_MEDIA;
@@ -82,6 +86,18 @@ public class LoginActivity extends AppCompatActivity {
     private String Mob_APPKEY = "11f2cd0844236";//Mob短信验证的key
     private String Mob_APPSECRET = "1789e20b33bf0a1b79419b32077c7b72";//Mob短信验证的secret负责管理整个SDK的配置、操作等处理
 
+<<<<<<< HEAD
+
+    /**
+     * 保存用户所有信息的偏好设置
+     *
+     */
+    public static final String SAVEUSER = "save_user";//偏好设置，保存用户所有信息
+    SharedPreferences mSharedPreferencesUser;//偏好设置,保存后台传来的用户信息
+    SharedPreferences.Editor mEditorUser;//偏好设置保存信息
+
+=======
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -257,6 +273,10 @@ public class LoginActivity extends AppCompatActivity {
      */
     public void loginNow(View view) {
         //首先判断用户的密码是否为空
+<<<<<<< HEAD
+       // Toast.makeText(LoginActivity.this, "按钮被单机", Toast.LENGTH_SHORT).show();
+=======
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
         if (!checkEdit()) {
             //密码为空，焦点移动到密码输入框
             mUpassword.requestFocus();
@@ -314,6 +334,26 @@ public class LoginActivity extends AppCompatActivity {
                         bundle.putBoolean("isLogin",true);
                         intent.putExtras(bundle);
                         startActivity(intent);
+<<<<<<< HEAD
+
+                        /**
+                         * 用于聊天的偏好设置
+                         */
+
+
+                        mSharedPreferencesUser = getSharedPreferences(SAVEUSER, MODE_PRIVATE);
+                        mEditorUser = mSharedPreferencesUser.edit();
+                        mEditorUser.putString("Uid",user.getUid()+"");
+                        mEditorUser.putString("Uhead",user.getUhead());
+                        mEditorUser.putString("Uname",user.getUname());
+                        mEditorUser.putString("Unickname",user.getUnickname());
+                        mEditorUser.putString("Utoken",user.getUtoken());
+                        mEditorUser.commit();
+
+
+
+=======
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
                     } else {
                         //登录不成功，提示信息并将页面输入框全部置空
                         show("登录失败！");

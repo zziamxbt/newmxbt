@@ -3,7 +3,10 @@ package com.example.acer.zzia_mxbt.utils;
 import com.qiniu.android.utils.UrlSafeBase64;
 
 import org.json.JSONObject;
+<<<<<<< HEAD
+=======
 
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
 import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;
 

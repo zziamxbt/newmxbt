@@ -1,7 +1,13 @@
 package com.example.acer.zzia_mxbt.activity;
 
 
+<<<<<<< HEAD
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+=======
+import android.content.Intent;
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
@@ -52,10 +58,17 @@ import org.xutils.common.Callback;
 import org.xutils.http.RequestParams;
 import org.xutils.x;
 
+<<<<<<< HEAD
 import java.lang.reflect.Type;
+=======
+<<<<<<< HEAD
+import java.util.ArrayList;
+=======
+>>>>>>> 909f427a22bef6f1ec40c14c1224720ec811368d
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
 import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -63,6 +76,8 @@ import java.util.TimerTask;
 import cn.jpush.android.api.JPushInterface;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+<<<<<<< HEAD
+=======
 
 
     //listData记录是否签到
@@ -76,6 +91,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     //判断是否已经签到
     private boolean signFlag=true;
 
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
     DrawerLayout drawer;
     ViewPager index_viewPager;
     ImageView index_menu;//导航菜单按钮
@@ -125,6 +141,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private static  boolean isLogin = false;
 
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
     public static User getUser() {
         return user;
     }
@@ -140,17 +160,32 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     //更多按钮
     ImageView more;
+<<<<<<< HEAD
+    //清空偏好设置
+    SharedPreferences mSharedPreferencesUser;//偏好设置,保存后台传来的用户信息
+    public static final String SAVEUSER = "save_user";//偏好设置，保存用户所有信息
+    SharedPreferences.Editor mEditorUser;//偏好设置保存信息
+=======
 
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Fresco.initialize(MainActivity.this);
+<<<<<<< HEAD
+        setContentView(R.layout.activity_main);
+//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+//        setSupportActionBar(toolbar);
+       // JPushInterface.setDebugMode(true);
+        JPushInterface.init(this);
+=======
        JPushInterface.init(this);
         setContentView(R.layout.activity_main);
 //        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 //        setSupportActionBar(toolbar);
         JPushInterface.setDebugMode(true);
 
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
         getLoginParam();
         initView();
         initData();
@@ -160,6 +195,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+<<<<<<< HEAD
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+=======
                 if(isLogin==true) {
                     Intent intent = new Intent(MainActivity.this, CreateAticle.class);
                     Bundle bundle = new Bundle();
@@ -170,6 +209,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     Intent intent = new Intent(MainActivity.this, QiyuActivity.class);
                     startActivity(intent);
                 }
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
             }
         });
 
@@ -260,6 +300,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             Toast.makeText(MainActivity.this, "发现", Toast.LENGTH_SHORT).show();
         } else if (id == R.id.side_message) {
             Toast.makeText(MainActivity.this, "消息中心", Toast.LENGTH_SHORT).show();
+<<<<<<< HEAD
+                Intent intent=new Intent(this,MessageActivity.class);
+                startActivity(intent);
+=======
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
         } else if (id == R.id.side_collect) {
             Toast.makeText(MainActivity.this, "我的收藏", Toast.LENGTH_SHORT).show();
         } else if (id == R.id.side_recentread) {
@@ -284,6 +329,18 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             Toast.makeText(MainActivity.this, "夜间模式", Toast.LENGTH_SHORT).show();
         } else if (id == R.id.side_quit) {
             isLogin = false;
+<<<<<<< HEAD
+            mSharedPreferencesUser = getSharedPreferences(SAVEUSER, MODE_PRIVATE);
+            mEditorUser = mSharedPreferencesUser.edit();
+            mEditorUser.remove("Uid");
+            mEditorUser.remove("Uhead");
+            mEditorUser.remove("Uname");
+            mEditorUser.remove("Unickname");
+            mEditorUser.remove("Utoken");
+            mEditorUser.commit();
+            Log.e("AAAAAAAAA","偏好设置清除完毕");
+=======
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
             Intent intent = new Intent(MainActivity.this, QiyuActivity.class);
             startActivity(intent);
             Toast.makeText(MainActivity.this, "退出登录", Toast.LENGTH_SHORT).show();
@@ -408,7 +465,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     bundle.putSerializable("user", user);
                     bundle.putBoolean("isLogin", true);
                     intent.putExtras(bundle);
+<<<<<<< HEAD
+                    startActivity(intent);
+=======
                     startActivityForResult(intent, USER_REQUEST_COD);
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
                     Toast.makeText(MainActivity.this, "您自己的头像被点击了！", Toast.LENGTH_SHORT).show();
                 } else {
                     //未登录
@@ -426,13 +487,21 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 PopupWindow popupWindow;
                 View view;
                 view = layoutInflater.inflate(R.layout.index_drop_down, null);
+<<<<<<< HEAD
+                TextView drop1, drop2, drop3;
+=======
                 final TextView drop1, drop2, drop3;
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
                 drop1 = (TextView) view.findViewById(R.id.drop1);
                 drop2 = (TextView) view.findViewById(R.id.drop2);
                 drop3 = (TextView) view.findViewById(R.id.drop3);
 
                 drop1.setText("排行榜");
+<<<<<<< HEAD
+                drop2.setText("2");
+=======
                 drop2.setText("签到");
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
                 drop3.setText("3");
 
 
@@ -441,7 +510,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 popupWindow.setOutsideTouchable(true);
                 popupWindow.showAsDropDown(more, -230, 20);
                 popupWindow.setAnimationStyle(R.style.anim_menu_animation);
+<<<<<<< HEAD
+=======
                 //排行榜监听
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
                 drop1.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -450,6 +522,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         startActivity(intent);
                     }
                 });
+<<<<<<< HEAD
+=======
                 //签到监听
 
                 getPath();//获取路径
@@ -479,6 +553,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
                     }
                 });
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
             }
         });
     }
@@ -538,6 +613,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
         return false;
     }
+<<<<<<< HEAD
+=======
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -562,6 +639,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         return str;
 
     }
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
 
 
 

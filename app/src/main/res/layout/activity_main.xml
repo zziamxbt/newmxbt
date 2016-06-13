@@ -6,7 +6,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+    
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
+>>>>>>> 909f427a22bef6f1ec40c14c1224720ec811368d
     tools:openDrawer="start">
 
 

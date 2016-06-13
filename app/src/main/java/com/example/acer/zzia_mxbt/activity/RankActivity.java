@@ -1,5 +1,9 @@
 package com.example.acer.zzia_mxbt.activity;
 
+<<<<<<< HEAD
+import android.graphics.Color;
+=======
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.os.Message;
@@ -139,7 +143,11 @@ public class RankActivity extends AppCompatActivity implements View.OnClickListe
                 PopupWindow popupWindow;
                 View view;
                 view = layoutInflater.inflate(R.layout.drop_down, null);
+<<<<<<< HEAD
+                final TextView drop1, drop2, drop3;
+=======
                 TextView drop1, drop2, drop3;
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
                 drop1 = (TextView) view.findViewById(R.id.drop1);
                 drop2 = (TextView) view.findViewById(R.id.drop2);
                 drop3 = (TextView) view.findViewById(R.id.drop3);
@@ -165,7 +173,11 @@ public class RankActivity extends AppCompatActivity implements View.OnClickListe
                         if(flag==false){
                             //代表作家中的关注度选项
 //                            Toast.makeText(MainActivity.this,"关注度被电击",Toast.LENGTH_LONG).show();
+<<<<<<< HEAD
+
+=======
 //                            Flagtest.setData("focus");
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
                             viewPager.setCurrentItem(0);
                             Message msg = new Message();
                             msg.what =1;
@@ -184,7 +196,13 @@ public class RankActivity extends AppCompatActivity implements View.OnClickListe
                                 novelFrament.handler.sendMessage(msg2);
                         }
 
+<<<<<<< HEAD
+                        drop1.setBackgroundColor(Color.WHITE);
+                        drop2.setBackgroundColor(Color.parseColor("#C4C3C4"));
+                        drop3.setBackgroundColor(Color.parseColor("#C4C3C4"));
+=======
 
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
 
                     }
                 });
@@ -217,6 +235,12 @@ public class RankActivity extends AppCompatActivity implements View.OnClickListe
                         }
 
 
+<<<<<<< HEAD
+                        drop1.setBackgroundColor(Color.parseColor("#C4C3C4"));
+                        drop2.setBackgroundColor(Color.WHITE);
+                        drop3.setBackgroundColor(Color.parseColor("#C4C3C4"));
+=======
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
 
                     }
                 });
@@ -247,6 +271,13 @@ public class RankActivity extends AppCompatActivity implements View.OnClickListe
                             }
 
                         }
+<<<<<<< HEAD
+                        drop1.setBackgroundColor(Color.parseColor("#C4C3C4"));
+                        drop2.setBackgroundColor(Color.parseColor("#C4C3C4"));
+                        drop3.setBackgroundColor(Color.WHITE);
+
+=======
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
                     }
                 });
         }

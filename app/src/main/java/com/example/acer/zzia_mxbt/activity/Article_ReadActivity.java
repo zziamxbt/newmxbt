@@ -4,6 +4,10 @@ import android.animation.ObjectAnimator;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
+<<<<<<< HEAD
+import android.content.SharedPreferences;
+=======
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -37,6 +41,10 @@ import com.example.acer.zzia_mxbt.application.MyApplication;
 import com.example.acer.zzia_mxbt.bean.ArticleBean;
 import com.example.acer.zzia_mxbt.bean.JavaBean_article;
 import com.example.acer.zzia_mxbt.bean.JavaBean_chapter;
+<<<<<<< HEAD
+import com.example.acer.zzia_mxbt.bean.user_info;
+=======
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
 import com.example.acer.zzia_mxbt.utils.SetPicture;
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.facebook.drawee.view.SimpleDraweeView;
@@ -59,6 +67,12 @@ import java.util.List;
 
 import cn.sharesdk.framework.ShareSDK;
 import cn.sharesdk.onekeyshare.OnekeyShare;
+<<<<<<< HEAD
+import io.rong.imkit.RongIM;
+import io.rong.imlib.RongIMClient;
+import io.rong.imlib.model.UserInfo;
+=======
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
 
 public class Article_ReadActivity extends AppCompatActivity {
     //接受上下文
@@ -148,8 +162,16 @@ public class Article_ReadActivity extends AppCompatActivity {
     Bitmap mcoverimg=null;
     int Uid=2;//数据待接收。。。。。。。。。。。。。。。。。。。。。
     SQLiteDatabase db=null;
+<<<<<<< HEAD
+//读取当前用户信息
+public static final String SAVEUSER = "save_user";//偏好设置，保存用户所有信息
+    SharedPreferences mSharedPreferencesUser;//偏好设置,保存后台传来的用户信息
+    String Uid2, Uhead, Uname, Unickname, Utoken;
+    List<user_info> listdata;
+=======
 
 
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -402,8 +424,11 @@ public class Article_ReadActivity extends AppCompatActivity {
             mJavaBean_article.setChapterAuthorName(listData.get(0).getAuthor_chapter_name().get(i - 1));
             mJavaBean_article.setArticleTime(listData.get(0).getCreate_chapter_time().get(i - 1));
             mJavaBean_article.setmAuthor_portraits(listData.get(0).getAuthor_chapter_head().get(i - 1));
+<<<<<<< HEAD
+=======
             mJavaBean_article.setAuthorId(listData.get(0).getUser_id().get(i-1));
             mJavaBean_article.setUserId(User_Id);
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
             mArticleList.add(mJavaBean_article);
             //封面简介赋值
         }
@@ -545,8 +570,88 @@ public class Article_ReadActivity extends AppCompatActivity {
     //foot的e_mail监听
     public void Foot_e_mail(View view) {
         Toast.makeText(Article_ReadActivity.this, "你点击了foot的e_mail", Toast.LENGTH_SHORT).show();
+<<<<<<< HEAD
+       //启动会话界面，设置用户token，昵称
+        //获取当前用户基本信息
+        usermessage();
+       String Uname= listData.get(0).getAuthor_Uname();
+            Log.e("tag",Uname);
+        RongIM.getInstance().startPrivateChat(Article_ReadActivity.this, Uname,"发起私聊");
     }
 
+    private void usermessage() {
+        mSharedPreferencesUser =getSharedPreferences(SAVEUSER, MODE_PRIVATE);
+//        Uid2 = mSharedPreferencesUser.getString("Uid", "");
+        Uhead = mSharedPreferencesUser.getString("Uhead", "");
+        Uname = mSharedPreferencesUser.getString("Uname", "");
+        Unickname = mSharedPreferencesUser.getString("Unickname", "");
+        Utoken = mSharedPreferencesUser.getString("Utoken", "");
+        listdata=new ArrayList<user_info>();
+       // Log.e("AAAAAAA",Utoken);
+        //建立与服务器的连接
+        connect(Utoken);
+        //获取当前用户头像，呢称，
+      userinfo();
+    }
+
+    private void userinfo() {
+        RongIM.setUserInfoProvider(new RongIM.UserInfoProvider() {
+            @Override
+            public UserInfo getUserInfo(String s) {
+
+                listdata=UserinfoActivity.getListdata2();
+
+                for (int i=0;listdata.size()>=i;i++) {
+                    if(listdata.size()==i){
+                        return new UserInfo(Uname,Unickname,Uri.parse(Uhead));
+                    }else
+                    if (listdata.get(i).getUname().equals(s)) {
+                        return new UserInfo(listdata.get(i).getUname(),listdata.get(i).getUnickname(), Uri.parse(listdata.get(i).getUhead()));
+                    }
+                }
+                return null;
+            }
+        }, true);//如果需要缓存用户信息为true，否则为false
+    }
+
+    private void connect(String token) {
+        /**
+         * IMKit SDK调用第二步,建立与服务器的连接
+         */
+        RongIM.connect(token, new RongIMClient.ConnectCallback() {
+            /**
+             * Token 错误，在线上环境下主要是因为 Token 已经过期，您需要向 App Server 重新请求一个新的 Token
+             */
+            @Override
+            public void onTokenIncorrect() {
+                Log.d("token错误", "请检查APP-KEY");
+            }
+
+            /**
+             * 连接融云成功
+             * @param userid 当前 token
+             */
+            @Override
+            public void onSuccess(String userid) {
+                Log.d("连接成功", "--onSuccess" + userid);
+            }
+
+            /**
+             * 连接融云失败
+             * @param errorCode 错误码，可到官网 查看错误码对应的注释
+             */
+            @Override
+            public void onError(RongIMClient.ErrorCode errorCode) {
+                Log.d("连接失败", "--onError" + errorCode);
+            }
+        });
+    }
+
+
+=======
+    }
+
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
     //foot的addfriend监听
     public void Foot_addfriend(View view) {
         Toast.makeText(Article_ReadActivity.this, "你点击了foot的Foot_addfriend", Toast.LENGTH_SHORT).show();
@@ -625,11 +730,14 @@ public class Article_ReadActivity extends AppCompatActivity {
 
     }
 
+<<<<<<< HEAD
+=======
     //举报文章监听
     public void Report(View view){
 
     }
 
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
 
     public void createdatabase() {
 
@@ -738,6 +846,15 @@ public class Article_ReadActivity extends AppCompatActivity {
 
     }
 
+<<<<<<< HEAD
+    //分享监听
+
+
+
+
+
+=======
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
     private void showShare() {
         ShareSDK.initSDK(this);
         OnekeyShare oks = new OnekeyShare();
@@ -805,8 +922,16 @@ public class Article_ReadActivity extends AppCompatActivity {
 //获取activity跳转过来的值
         Intent intent= getIntent();
         int article_id = intent.getIntExtra("Article_Id",0);
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+        User_Id =intent.getIntExtra("User_Id",0);
+        Log.e("article_id", "article_id: " + article_id);
+=======
+>>>>>>> 909f427a22bef6f1ec40c14c1224720ec811368d
         User_Id =intent.getIntExtra("User_Id",1);
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
         //   int User_Id=0;
         params = new RequestParams(mPath);
         if(User_Id==0){
@@ -854,10 +979,24 @@ public class Article_ReadActivity extends AppCompatActivity {
                     Type type = new TypeToken<List<ArticleBean>>() {
                     }.getType();
                     listData = gson.fromJson(result, type);
+<<<<<<< HEAD
+                    Log.e("listData", "listData: " + listData.get(0).getAuthor_Uname());
+=======
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
                     initdata(listData);
                     Log.e("listData", "listData: " + listData);
                 }
 
+<<<<<<< HEAD
+
+
+
+
+                //    initdata(list);
+          /*      mArticleList.notify();*/
+
+=======
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
             }
 
             @Override

@@ -9,6 +9,15 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.DefaultItemAnimator;
+<<<<<<< HEAD
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.util.Log;
+import android.util.TypedValue;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+=======
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -20,12 +29,16 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
 import android.widget.Toast;
 
 import com.example.acer.zzia_mxbt.R;
 import com.example.acer.zzia_mxbt.activity.Article_ReadActivity;
 import com.example.acer.zzia_mxbt.activity.CenterActivity;
+<<<<<<< HEAD
+=======
 import com.example.acer.zzia_mxbt.adapters.MyRecyclerViewAdapter;
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
 import com.example.acer.zzia_mxbt.adapters.MyRecyclerViewAdapter2;
 import com.example.acer.zzia_mxbt.application.MyApplication;
 import com.example.acer.zzia_mxbt.bean.IndexBean;

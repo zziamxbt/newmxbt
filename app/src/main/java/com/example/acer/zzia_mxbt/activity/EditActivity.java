@@ -1,5 +1,14 @@
 package com.example.acer.zzia_mxbt.activity;
 
+<<<<<<< HEAD
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+
+import com.example.acer.zzia_mxbt.R;
+
+public class EditActivity extends AppCompatActivity {
+
+=======
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
@@ -110,10 +119,13 @@ public class EditActivity extends AppCompatActivity {
     //裁剪图片的宽高
     private static int output_X = 600;
     private static int output_Y = 600;
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit);
+<<<<<<< HEAD
+=======
         getPopupWindow();
         findView();
         UserGetter();
@@ -538,5 +550,6 @@ private void saveImg(Intent intent) {
         } else {
             initPopuptWindow();
         }
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
     }
 }

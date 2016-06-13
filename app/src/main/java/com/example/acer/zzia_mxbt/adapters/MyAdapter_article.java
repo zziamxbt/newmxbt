@@ -1,33 +1,78 @@
 package com.example.acer.zzia_mxbt.adapters;
 
 import android.content.Context;
+<<<<<<< HEAD
+=======
 import android.content.DialogInterface;
+<<<<<<< HEAD
 import android.net.Uri;
+=======
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
+import android.graphics.Picture;
+import android.net.Uri;
+import android.os.Handler;
+import android.os.Message;
+<<<<<<< HEAD
+=======
+>>>>>>> 909f427a22bef6f1ec40c14c1224720ec811368d
 import android.support.v7.app.AlertDialog;
 import android.text.InputType;
 import android.util.Log;
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+<<<<<<< HEAD
+=======
 import android.widget.EditText;
 import android.widget.ImageView;
+<<<<<<< HEAD
+=======
+import android.widget.RemoteViews;
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
+>>>>>>> 909f427a22bef6f1ec40c14c1224720ec811368d
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.acer.zzia_mxbt.R;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import com.example.acer.zzia_mxbt.bean.JavaBean_article;
+=======
+import com.example.acer.zzia_mxbt.application.MyApplication;
+import com.example.acer.zzia_mxbt.bean.ArticleBean;
+>>>>>>> 909f427a22bef6f1ec40c14c1224720ec811368d
 import com.example.acer.zzia_mxbt.bean.JavaBean_article;
 import com.example.acer.zzia_mxbt.bean.WalletBean;
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
 import com.example.acer.zzia_mxbt.utils.SetPicture;
 import com.facebook.drawee.view.SimpleDraweeView;
+<<<<<<< HEAD
+=======
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
 import org.xutils.common.Callback;
 import org.xutils.http.RequestParams;
 import org.xutils.x;
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
 
+<<<<<<< HEAD
 import java.lang.reflect.Type;
+=======
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+<<<<<<< HEAD
+=======
+import java.lang.reflect.Type;
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+>>>>>>> 909f427a22bef6f1ec40c14c1224720ec811368d
 import java.util.List;
 
 
@@ -36,19 +81,25 @@ import java.util.List;
  * Created by Gemptc on 2016/5/14.
  */
 public class MyAdapter_article extends BaseAdapter {
+<<<<<<< HEAD
+=======
     //存储金币集合
     List<WalletBean> mList;
     //获取路径
     private String mPath="http://10.201.1.115:8080/ZZIA_MXBT/wallet_servlet";
     private boolean goldFlag=true;
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
     //文章內容默認大小
     public static final int size = 13;
     private int myPosition;
     private Context mContext;
     private List<JavaBean_article> mArticleList;
     private LayoutInflater mInflater;
+<<<<<<< HEAD
+=======
     private EditText mEditText;
     private TextView mTextView;
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
     ViewHolder viewHolder = new ViewHolder();
 
     static class ViewHolder {
@@ -57,7 +108,10 @@ public class MyAdapter_article extends BaseAdapter {
         private TextView ChapterTitle;
         private TextView ChapterAuthorName;
         private SimpleDraweeView mauthor_portraits;
+<<<<<<< HEAD
+=======
         private ImageView mShangCi;
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
     }
 
     public MyAdapter_article(Context mContext, List<JavaBean_article> mArticleList, int myPosition) {
@@ -65,8 +119,11 @@ public class MyAdapter_article extends BaseAdapter {
         this.mArticleList = mArticleList;
         this.myPosition = myPosition;
         mInflater = LayoutInflater.from(mContext);
+<<<<<<< HEAD
+=======
 
         mTextView=new TextView(mContext);
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
     }
 
 
@@ -90,6 +147,10 @@ public class MyAdapter_article extends BaseAdapter {
 
             convertView = mInflater.inflate(
                     R.layout.listview_article, null);
+<<<<<<< HEAD
+
+=======
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
             viewHolder.ArticleContent = (TextView) convertView.findViewById(
                     R.id.ArticleContent);
             viewHolder.ArticleTime = (TextView) convertView.findViewById(
@@ -99,8 +160,11 @@ public class MyAdapter_article extends BaseAdapter {
             viewHolder.ChapterAuthorName = (TextView) convertView.findViewById(
                     R.id.ChapterAuthorName);
             viewHolder.mauthor_portraits = (SimpleDraweeView) convertView.findViewById(R.id.ChapterAuthor);
+<<<<<<< HEAD
+=======
             viewHolder.mShangCi= (ImageView) convertView.findViewById(R.id.ShangCi);
 
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
 
         viewHolder.ArticleContent.setText(mArticleList.get(position).getArticleContent());
         viewHolder.ArticleTime.setText(mArticleList.get(position).getArticleTime());
@@ -117,6 +181,9 @@ public class MyAdapter_article extends BaseAdapter {
         viewHolder.mauthor_portraits.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+<<<<<<< HEAD
+                Toast.makeText(mContext, "你点击的本章节续写者的头像,第"+(position+1)+"章节续写者", Toast.LENGTH_LONG).show();
+=======
 
                 Toast.makeText(mContext, "你点击本章节的用户id:"+mArticleList.get(position).getUserId()+",此章节id："+mArticleList.get(position).getAuthorId(),Toast.LENGTH_LONG).show();
             }
@@ -150,12 +217,17 @@ public class MyAdapter_article extends BaseAdapter {
                 builder.setNegativeButton("取消",null);
                 builder.create().show();
                 Toast.makeText(mContext, "你点击本章节的用户id:"+mArticleList.get(position).getUserId()+",此章节id："+mArticleList.get(position).getAuthorId(),Toast.LENGTH_LONG).show();
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
             }
         });
 
         return convertView;
     }
 
+<<<<<<< HEAD
+
+    //取出文章内容
+=======
      //访问后台数据
     public void getTest(int Uid,int Authorid,int goldNum,boolean goldFlag){
         RequestParams params = new RequestParams(mPath);
@@ -201,6 +273,7 @@ public class MyAdapter_article extends BaseAdapter {
             }
         });
     }
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
 
 
 }

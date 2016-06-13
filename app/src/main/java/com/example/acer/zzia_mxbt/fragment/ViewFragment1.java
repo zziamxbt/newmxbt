@@ -113,7 +113,11 @@ public class ViewFragment1 extends Fragment {
 
 
 
+<<<<<<< HEAD
+        RequestParams params = new RequestParams("http://10.201.1.166:8080/ZZIA_MXBT/indexofzhenshi_servlet");
+=======
         RequestParams params = new RequestParams("http://10.201.1.183:8080/ZZIA_MXBT/indexofzhenshi_servlet");
+>>>>>>> f8b6b108d6a2b67396c89d0a2acb5dba08316d44
 
 //       RequestParams params= new RequestParams("http://139.129.58.244:8080/ZZIA_MXBT/indexofzhenshi_servlet");
         params.addQueryStringParameter("select",flag);
