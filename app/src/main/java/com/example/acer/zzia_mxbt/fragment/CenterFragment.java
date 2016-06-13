@@ -30,8 +30,6 @@ import com.example.acer.zzia_mxbt.application.MyApplication;
 import com.example.acer.zzia_mxbt.bean.IndexBean;
 import com.example.acer.zzia_mxbt.utils.SpacesItemDecoration;
 
-
-
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
@@ -93,6 +91,7 @@ public class CenterFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.centerlayout, container, false);
+
         initBeginAndEnd();
 
         //初始化各个控件和视图
@@ -111,20 +110,18 @@ public class CenterFragment extends Fragment {
         end = 9;
     }
 
-
     private void askForData() {
         RequestParams params = new RequestParams(MyApplication.getMystory_url());
 
 //       RequestParams params= new RequestParams("http://139.129.58.244:8080/ZZIA_MXBT/index_servlet");
         params.addQueryStringParameter("uid",CenterActivity.getUser().getUid()+"");
 
-
         x.http().get(params, new Callback.CommonCallback<String>() {
 
             @Override
             public void onSuccess(String result) {
 
-                Log.e("aaa", "onSuccess: " );
+                Log.e("aaa", "onSuccess: ");
 
                 Gson gson = new Gson();
                 Type type = new TypeToken<List<IndexBean>>() {
@@ -153,7 +150,7 @@ public class CenterFragment extends Fragment {
                         startActivity(intent);
                     }
                 });
-                // myRecyclerViewAdapter = new MyRecyclerViewAdapter(getActivity(),list);
+ // myRecyclerViewAdapter = new MyRecyclerViewAdapter(getActivity(),list);
                 recyclerView.setAdapter(myRecyclerViewAdapter);
 
 
@@ -179,11 +176,6 @@ public class CenterFragment extends Fragment {
             }
         });
     }
-
-
-
-
-
 
     private void setView() {
         linearLayoutManager = new LinearLayoutManager(getActivity());
@@ -247,7 +239,6 @@ public class CenterFragment extends Fragment {
         mSwipeRefreshWidget = (SwipeRefreshLayout) view.findViewById(R.id.swipe_refresh_widget);
     }
 
-
     class loadDataAsyncTask extends AsyncTask<List<IndexBean>, Integer, String> {
         private static final int HIDDEN_CODE = 1;
         private static final int APPEAR_CODE = 2;
@@ -286,7 +277,6 @@ public class CenterFragment extends Fragment {
             }
             return "success";
         }
-
 
         @Override
         protected void onPostExecute(String s) {

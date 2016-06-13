@@ -33,7 +33,6 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyViewHolder> im
     private OnRecyclerViewItemClickListener mOnItemClickListener = null;
 
 
-
     public MyRecyclerViewAdapter(Context context, List<IndexBean> datas) {
         this.datas = datas;
         this.context = context;

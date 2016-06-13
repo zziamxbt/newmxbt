@@ -1,8 +1,6 @@
 package com.example.acer.zzia_mxbt.activity;
 
-import org.xutils.common.Callback;
-import org.xutils.http.RequestParams;
-import org.xutils.x;
+
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
@@ -11,7 +9,6 @@ import android.os.Handler;
 import android.os.Message;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
@@ -34,7 +31,6 @@ import android.widget.Toast;
 import com.example.acer.zzia_mxbt.R;
 import com.example.acer.zzia_mxbt.adapters.IndexFragmentPagerAdapter;
 import com.example.acer.zzia_mxbt.application.MyApplication;
-import com.example.acer.zzia_mxbt.bean.ArticleBean;
 import com.example.acer.zzia_mxbt.bean.SignBean;
 import com.example.acer.zzia_mxbt.bean.User;
 import com.example.acer.zzia_mxbt.fragment.ViewFragment;
@@ -52,7 +48,9 @@ import com.facebook.drawee.view.SimpleDraweeView;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
-
+import org.xutils.common.Callback;
+import org.xutils.http.RequestParams;
+import org.xutils.x;
 
 import java.lang.reflect.Type;
 import java.text.SimpleDateFormat;
@@ -66,11 +64,13 @@ import cn.jpush.android.api.JPushInterface;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
+
     //listData记录是否签到
     List<SignBean> listData;
     //访问网络数据的路径
     public String mPath;
     //判断是否已经签到
+
     private static final int USER_REQUEST_COD = 1;
 
     //判断是否已经签到
@@ -82,7 +82,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     ImageView kind_ring;//分类图片（圆环）
     TextView kind_content;//分类内容
     //需要传一个Uid给离线阅读
-    int Uid = 2;//数据待接受。。。。。。。。。。。。。。。。。。。
+
+    int Uid=2;//数据待接受。。。。。。。。。。。。。。。。。。。
 
     //隐藏的布局
     RelativeLayout loadding_layout;
@@ -123,6 +124,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     private static  boolean isLogin = false;
 
+
     public static User getUser() {
         return user;
     }
@@ -131,9 +133,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         return isLogin;
     }
 
+
     private static User user;
     //双击退出标志位
-    Boolean isExit = false;
+    Boolean isExit =false;
+
     //更多按钮
     ImageView more;
 
@@ -263,12 +267,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         } else if (id == R.id.side_download) {
             Toast.makeText(MainActivity.this, "离线阅读", Toast.LENGTH_SHORT).show();
             //离线阅读操作
-            if (Uid != 0) {
-                Intent intent = new Intent(MainActivity.this, DownlineActivity.class);
-                intent.putExtra("Uid", Uid);
+
+            if(Uid!=0){
+                Intent intent=new Intent(MainActivity.this,DownlineActivity.class);
+                intent.putExtra("Uid",Uid);
                 startActivity(intent);
-            } else {
-                Intent intent = new Intent(MainActivity.this, RegistActivity.class);
+            }else{
+                Intent intent=new Intent(MainActivity.this,RegistActivity.class);
                 startActivity(intent);
             }
 
@@ -288,7 +293,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-
 
     public void initView() {
         index_menu = (ImageView) findViewById(R.id.index_menu);
@@ -447,6 +451,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     }
                 });
                 //签到监听
+
                 getPath();//获取路径
                 if (Uid != 0) {
                     getText(true,drop2);  //从数据库中查看是否被签到
@@ -468,6 +473,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                             } else {
                                 Toast.makeText(MainActivity.this, "你已签到，请明天再来", Toast.LENGTH_LONG).show();
                             }
+
 
                         }
 
@@ -547,13 +553,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     }
     //用来判断是否可以再次签到
-    public String isSignFlag() {
-        SimpleDateFormat formatter = new SimpleDateFormat("yyyy年MM月dd日");
-        Date curDate = new Date(System.currentTimeMillis());//获取当前时间
-        String str = formatter.format(curDate);
+
+    public String isSignFlag(){
+        SimpleDateFormat    formatter    =   new SimpleDateFormat("yyyy年MM月dd日");
+        Date curDate    =   new    Date(System.currentTimeMillis());//获取当前时间
+        String    str    =    formatter.format(curDate);
+
         return str;
 
     }
+
 
 
     public void getPath() {
@@ -601,5 +610,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
         });
     }
+
 
 }

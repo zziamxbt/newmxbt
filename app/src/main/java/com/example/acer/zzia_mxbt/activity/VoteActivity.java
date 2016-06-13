@@ -29,6 +29,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class VoteActivity extends AppCompatActivity {
+
     RecyclerView recycler;
     recycleview_adapter adapter;
     List<vote_content> list;
@@ -48,6 +49,7 @@ public class VoteActivity extends AppCompatActivity {
                     break;
                 case 2:
                     //代表执行加一操作标志位
+
                     flag= (String) msg.obj;
                     Log.e("BB",flag);
                     initdata();

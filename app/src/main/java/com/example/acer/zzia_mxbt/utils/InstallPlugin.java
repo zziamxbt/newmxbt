@@ -16,11 +16,13 @@ public class InstallPlugin {
 
     public static final String ASSETS_PLUGIN = "BmobPayPlugin.apk";
 
-    public static void installBmobPayPlugin(Activity activity, String fileName) {
+    public static void installBmobPayPlugin(Activity activity,String fileName) {
         try {
             InputStream is = activity.getAssets().open(fileName);
             File file = new File(Environment.getExternalStorageDirectory()
-                    + File.separator + fileName);
+                    + File.separator + fileName + ".apk");
+            if (file.exists())
+                file.delete();
             file.createNewFile();
             FileOutputStream fos = new FileOutputStream(file);
             byte[] temp = new byte[1024];

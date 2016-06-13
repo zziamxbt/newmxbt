@@ -20,6 +20,7 @@ import com.example.acer.zzia_mxbt.activity.Article_ReadActivity;
 import com.example.acer.zzia_mxbt.activity.MainActivity;
 import com.example.acer.zzia_mxbt.adapters.IndexListAdapter;
 
+
 import com.example.acer.zzia_mxbt.adapters.IndexListAdapter1;
 
 import com.example.acer.zzia_mxbt.bean.IndexBean;
@@ -68,7 +69,6 @@ public class ViewFragment extends Fragment {
     Boolean isend=false;
     static  int begin = 0;
     static  int end = 9;
-
     View view;
 
     @Nullable
@@ -104,9 +104,6 @@ public class ViewFragment extends Fragment {
     }
 
     private void initList() {
-
-
-
 
         RequestParams params = new RequestParams("http://10.201.1.115:8080/ZZIA_MXBT/index_servlet");
        RequestParams paramsSend=new RequestParams("http://10.201.1.115:8080/ZZIA_MXBT/sendMessage");
@@ -175,7 +172,6 @@ public class ViewFragment extends Fragment {
                 for (int i = begin; i <= end; i++) {
                     savelist.add(list.get(i));
                 }
-
 
                 ila = new IndexListAdapter(getActivity(),  savelist);
                 listView.setAdapter(ila);

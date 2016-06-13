@@ -30,6 +30,8 @@ import org.xutils.x;
 import java.lang.reflect.Type;
 import java.util.List;
 
+
+
 /**
  * Created by Gemptc on 2016/5/14.
  */

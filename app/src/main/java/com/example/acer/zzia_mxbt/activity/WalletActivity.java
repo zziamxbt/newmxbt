@@ -1,5 +1,6 @@
 package com.example.acer.zzia_mxbt.activity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -9,7 +10,9 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+
 import android.support.v7.app.AlertDialog;
+
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -44,9 +47,9 @@ import java.util.List;
 
 import c.b.BP;
 import c.b.PListener;
-import c.b.Unity;
 
 public class WalletActivity extends AppCompatActivity {
+    private ProgressDialog dialog;
     //判断是获取信息还是修改金币数
     private boolean goldFlag=true;
     //充值金币数
@@ -198,7 +201,9 @@ public class WalletActivity extends AppCompatActivity {
 
     //充值监听
     public void Charge(View view) {
+
         AlertDialog.Builder builder=new AlertDialog.Builder(this);
+
         if(mnine.getText().toString().equals("")){
 
         }else {
@@ -345,6 +350,7 @@ public class WalletActivity extends AppCompatActivity {
         }else {
             params.addQueryStringParameter("User_id", 1 + "");
             params.addQueryStringParameter("gold","true");
+
             params.addQueryStringParameter("goldNum",""+(Integer.valueOf(mnine.getText().toString())+Integer.valueOf(mgoldNum.getText().toString())));
         }
 
@@ -425,8 +431,7 @@ public class WalletActivity extends AppCompatActivity {
          * 第四个是商品价格
          * 第5个参数为true时调用支付宝支付，为false时调用微信支付
          */
-
-        BP.pay(this, title, describe, price, paytype, new PListener() {
+       /* BP.pay(this, title, describe, price, paytype, new PListener() {
             @Override
             public void orderId(String s) {
                 Show("订单号：" + s);
@@ -447,11 +452,7 @@ public class WalletActivity extends AppCompatActivity {
                 }
                 if (i == -3) {
                     Show("未安装微信插件");
-                    InstallPlugin.installBmobPayPlugin(WalletActivity.this,
-                            InstallPlugin.ASSETS_PLUGIN);
-                    /*Intent intent=new Intent(MainActivity.this,ApkAutoInstallActivity.class);
-                    startActivity(intent);*/
-                    Unity.installPlugin("BmobPayPlugin.apk");
+                    InstallPlugin.installBmobPayPlugin("bp.qb");
                 }
                 Show("支付失败" + i + s);
             }
@@ -460,16 +461,57 @@ public class WalletActivity extends AppCompatActivity {
             public void unknow() {
                 Show("未知");
             }
+        });*/
+
+        BP.pay(title, describe, price, paytype, new PListener() {
+
+            // 因为网络等原因,支付结果未知(小概率事件),出于保险起见稍后手动查询
+            @Override
+            public void unknow() {
+                Toast.makeText(WalletActivity.this, "支付结果未知,请稍后手动查询", Toast.LENGTH_SHORT)
+                        .show();
+                hideDialog();
+            }
+
+            // 支付成功,如果金额较大请手动查询确认
+            @Override
+            public void succeed() {
+                getTest();
+                Toast.makeText(WalletActivity.this, "支付成功!", Toast.LENGTH_SHORT).show();
+                hideDialog();
+            }
+
+            // 无论成功与否,返回订单号
+            @Override
+            public void orderId(String orderId) {
+                // 此处应该保存订单号,比如保存进数据库等,以便以后查询
+                showDialog("获取订单成功!请等待跳转到支付页面~");
+            }
+
+            // 支付失败,原因可能是用户中断支付操作,也可能是网络原因
+            @Override
+            public void fail(int code, String reason) {
+
+                // 当code为-2,意味着用户中断了操作
+                // code为-3意味着没有安装BmobPlugin插件
+                if (code == -3) {
+                    Toast.makeText(
+                            WalletActivity.this,
+                            "监测到你尚未安装支付插件,无法进行支付,请先安装插件(已打包在本地,无流量消耗),安装结束后重新支付",
+                            Toast.LENGTH_LONG).show();
+                        // InstallPlugin.installBmobPayPlugin("bp.db");
+                } else {
+                    Toast.makeText(WalletActivity.this, "支付中断!", Toast.LENGTH_SHORT)
+                            .show();
+                }
+
+                hideDialog();
+            }
         });
 
     }
 
-    //用来调用应用中的方法，来告诉应用支付的结果
-    public void onPayReaultReturn(double price, String describe, boolean paytype, int requestcode) {
-        String title = "支付";
-        String gameobjectname = "onPayReaultReturn";
-        Unity.pay(WalletActivity.this, title, describe, price, paytype, gameobjectname, requestcode);
-    }
+
 
     //订单查询方法
  /*   public void onsearchOrder(String orderid) {
@@ -492,4 +534,26 @@ public class WalletActivity extends AppCompatActivity {
     private void Show(String s) {
         Toast.makeText(WalletActivity.this, s, Toast.LENGTH_SHORT).show();
     }
+
+    void showDialog(String message) {
+        try {
+            if (dialog == null) {
+                dialog = new ProgressDialog(this);
+                dialog.setCancelable(true);
+            }
+            dialog.setMessage(message);
+            dialog.show();
+        } catch (Exception e) {
+            // 在其他线程调用dialog会报错
+        }
+    }
+
+    void hideDialog() {
+        if (dialog != null && dialog.isShowing())
+            try {
+                dialog.dismiss();
+            } catch (Exception e) {
+            }
+    }
+
 }

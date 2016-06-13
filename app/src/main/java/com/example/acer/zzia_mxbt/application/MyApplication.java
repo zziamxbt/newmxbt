@@ -12,6 +12,7 @@ import org.xutils.x;
  * Created by acer on 2016/5/18.
  */
 public class MyApplication extends Application {
+
     //获取签到信息
     private String Url_Sign="http://10.201.1.115:8080/ZZIA_MXBT/signServlet";
     //获取钱包信息
@@ -19,7 +20,8 @@ public class MyApplication extends Application {
     //获取续写内容
     private static String Url_WriteArticle="http://10.201.1.115:8080/ZZIA_MXBT/write_Content";
     //获取文章内容
-    private static String Url_Article = "http://10.201.1.183:8080/ZZIA_MXBT/article_complete";
+
+    private static String Url_Article = "http://10.201.1.115:8080/ZZIA_MXBT/article_complete";
 
 
     public static String getUrl_Edit() {
@@ -27,7 +29,7 @@ public class MyApplication extends Application {
     }
 
     //修改用户信息的serve
-    private static String Url_Edit="http://10.201.1.183:8080/ZZIA_MXBT/user_edit";
+    private static String Url_Edit="http://10.201.1.115:8080/ZZIA_MXBT/user_edit";
 
 
     /*private String registUrl="http://10.201.1.170:80/MXBT_Register/checkServlet";
@@ -37,7 +39,8 @@ public class MyApplication extends Application {
     private String registUrl = "http://10.201.1.115:8080/ZZIA_MXBT/registCheckServlet";
 
     //登录
-    private String loginUrl = "http://10.201.1.183:8080/ZZIA_MXBT/loginCheckServlet";
+
+    private String loginUrl = "http://10.201.1.115:8080/ZZIA_MXBT/loginCheckServlet";
 
 
     //显示搜素版块
@@ -77,15 +80,14 @@ public class MyApplication extends Application {
     }
 
     //创建故事
-    private static String article_create = "http://10.201.1.183:8080/ZZIA_MXBT/articlecreater";
-
-    private static  String mycollect_url="http://10.201.1.183:8080/ZZIA_MXBT/mycollect";
+    private static String article_create = "http://10.201.1.115:8080/ZZIA_MXBT/articlecreater";
+    
+    private static  String mycollect_url="http://10.201.1.115:8080/ZZIA_MXBT/mycollect";
     //我的推荐
-    private static  String myrecommand_url="http://10.201.1.183:8080/ZZIA_MXBT/myrecommand";
+    private static  String myrecommand_url="http://10.201.1.115:8080/ZZIA_MXBT/myrecommand";
     //个人中心
-    private static  String center_url="http://10.201.1.183:8080/ZZIA_MXBT/index_servlet";
-
-
+    private static  String center_url="http://10.201.1.115:8080/ZZIA_MXBT/index_servlet";
+    
     @Override
     public void onCreate() {
         super.onCreate();
@@ -93,11 +95,11 @@ public class MyApplication extends Application {
         x.Ext.setDebug(BuildConfig.DEBUG);
         Fresco.initialize(this);
     }
-
+    
     public String getUrl_Sign() {
         return Url_Sign;
     }
-
+    
     public String getUrl_Wallet() {
         return Url_Wallet;
     }
@@ -143,7 +145,7 @@ public class MyApplication extends Application {
     public String getShowSubjectArticleUrl() {
         return showSubjectArticleUrl;
     }
-
+    
     public static String getMystory_url() {
         return mystory_url;
     }
@@ -165,7 +167,7 @@ public class MyApplication extends Application {
     public String getSearchThemeUrl() {
         return searchThemeUrl;
     }
-
+    
     public String getShowLableUrl() {
         return showLableUrl;
     }

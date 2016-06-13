@@ -63,7 +63,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <LinearLayout
-                android:onClick="Downline_Read"
+
+android:onClick="Downline_Read"
+
                 android:paddingLeft="100dp"
                 android:orientation="vertical"
                 android:layout_width="wrap_content"
@@ -93,7 +95,9 @@
                     android:layout_gravity="center"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    fresco:placeholderImage="@drawable/report"
+
+                    fresco:placeholderImage="@drawable/article_report"
+
                     fresco:roundAsCircle="true"
                     fresco:placeholderImageScaleType="fitCenter"/>
                 <TextView

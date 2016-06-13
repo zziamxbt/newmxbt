@@ -135,14 +135,13 @@ public class Article_ReadActivity extends AppCompatActivity {
     private int TextContent = 0;
     //执行推荐getText（）
 
-
     private int RecommendNum = 1;
     //执行收藏getText（）
     private int CollectNum = 2;
-
     //接受传递的参数
     private  int User_Id;
-//创建sqllite，存储图片
+
+    //创建sqllite，存储图片
 
     Bitmap mUhead=null;
     Bitmap mUbk=null;
@@ -150,8 +149,7 @@ public class Article_ReadActivity extends AppCompatActivity {
     int Uid=2;//数据待接收。。。。。。。。。。。。。。。。。。。。。
     SQLiteDatabase db=null;
 
-    //保存章节Id
-    private int[] Chapter_Id;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -843,6 +841,7 @@ public class Article_ReadActivity extends AppCompatActivity {
             }
         }
 
+
         //第二步：开始请求，设置请求方式，同时实现回调函数
         x.http().get(params, new Callback.CommonCallback<String>() {
             @Override
@@ -850,16 +849,14 @@ public class Article_ReadActivity extends AppCompatActivity {
                 //访问成功，参数其实就是PrintWriter写回的值
                 //把JSON格式的字符串改为Student对象
 
-
-                     if(Num==0){
-                         Gson gson = new Gson();
-                         Type type = new TypeToken<List<ArticleBean>>() {
-                         }.getType();
-                         listData = gson.fromJson(result, type);
-                         initdata(listData);
-                         Log.e("listData", "listData: " + listData);
-                     }
-
+                if(Num==0) {
+                    Gson gson = new Gson();
+                    Type type = new TypeToken<List<ArticleBean>>() {
+                    }.getType();
+                    listData = gson.fromJson(result, type);
+                    initdata(listData);
+                    Log.e("listData", "listData: " + listData);
+                }
 
             }
 
