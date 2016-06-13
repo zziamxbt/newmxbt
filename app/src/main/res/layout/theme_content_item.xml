@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/theme_article_item_head"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true" />
+
+        <TextView
+            android:id="@+id/theme_article_item_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_toEndOf="@+id/theme_article_item_head"
+            android:layout_toRightOf="@+id/theme_article_item_head"
+            android:text="@string/noname" />
+
+        <TextView
+            android:id="@+id/theme_article_item_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/theme_article_item_head"
+            android:layout_alignLeft="@+id/theme_article_item_nickname"
+            android:layout_alignStart="@+id/theme_article_item_nickname"
+            android:text="@string/defaulttime" />
+
+        <TextView
+            android:id="@+id/theme_article_item_kind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:text="真事·连载中"
+
+            android:textSize="10dp" />
+
+        <ImageView
+            android:id="@+id/theme_article_item_kindimg"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+
+            android:layout_toLeftOf="@+id/theme_article_item_kind"
+            android:layout_toStartOf="@+id/theme_article_item_kind"
+            android:src="@drawable/ring_blue" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/theme_article_item_background"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:scaleType="fitXY" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/theme_article_item_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="一只猫"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/theme_article_item_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/theme_article_item_title"
+            android:text="，我家猫看我的眼神怪怪的，我家猫看我的眼神怪怪的我家猫看我的眼神怪怪的，
+        我家猫看我的眼神怪怪的，我家猫看我的眼神怪怪的，我家猫看我的眼神怪怪的" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/theme_article_item_commentnum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:text="100" />
+
+        <ImageView
+            android:id="@+id/theme_article_item_talkimg"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginRight="3dp"
+            android:layout_toLeftOf="@id/theme_article_item_commentnum"
+            android:src="@drawable/talk" />
+
+        <TextView
+            android:id="@+id/theme_article_item_recommendnum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@id/theme_article_item_talkimg"
+            android:text="200" />
+
+        <ImageView
+            android:id="@+id/theme_article_item_recommendimg"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginRight="3dp"
+            android:layout_toLeftOf="@id/theme_article_item_recommendnum"
+            android:src="@drawable/recommend" />
+
+        <TextView
+            android:id="@+id/theme_article_item_collectnum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@id/theme_article_item_recommendimg"
+            android:text="300" />
+
+        <ImageView
+            android:id="@+id/theme_article_item_collectimg"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginRight="3dp"
+            android:layout_toLeftOf="@id/theme_article_item_collectnum"
+            android:src="@drawable/collect" />
+    </RelativeLayout>
+</LinearLayout>
+

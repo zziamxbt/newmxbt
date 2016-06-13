@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<TextView
+    android:paddingLeft="20dp"
+    android:paddingTop="25dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="一章一篇"
+    android:textStyle="bold"
+    android:textSize="15sp"
+    android:id="@+id/ChapterTitle"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="10dp"
+        android:paddingTop="30dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:textSize="10sp"
+        android:id="@+id/ArticleContent"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/ChapterAuthor"
+                fresco:placeholderImage="@drawable/author_portraits"
+                fresco:roundAsCircle="true"
+                fresco:placeholderImageScaleType="fitCenter"/>
+            <TextView
+                android:paddingLeft="15dp"
+                android:paddingRight="30dp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ChapterAuthorName"
+                android:text="动容"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+    <TextView
+        android:listSelector="@color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="20dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:id="@+id/ArticleTime"
+        android:gravity="right"
+        android:text="更新于 2016-05-14 14:17"
+        />
+
+</LinearLayout>

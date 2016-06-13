@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:paddingTop="20dp"
+        android:paddingLeft="20dp"
+        android:textSize="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Write_ChapterName"
+        android:text="第四章 桃枝"/>
+    <TextView
+        android:paddingTop="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:textSize="17dp"
+        android:lineSpacingExtra="10sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Write_ChapterContent"
+        android:text="wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/Write_ChapterAuthor"
+                fresco:placeholderImage="@drawable/author_portraits"
+                fresco:roundAsCircle="true"
+                fresco:placeholderImageScaleType="fitCenter"/>
+
+            <TextView
+                android:paddingLeft="15dp"
+                android:paddingRight="30dp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Write_ChapterAuthorName"
+                android:text="动容"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+    <TextView
+        android:listSelector="@color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="20dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:id="@+id/Write_ArticleTime"
+        android:gravity="right"
+        android:textSize="15sp"
+        android:text="更新于 2016-05-14 14:17"
+        />
+
+</LinearLayout>

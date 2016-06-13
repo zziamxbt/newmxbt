@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:paddingTop="80dp"
+        android:scaleType="fitXY"
+        android:layout_gravity="center"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:id="@+id/ArticleHeadBackground" />
+    <TextView
+        android:paddingTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:text="文章名"
+        android:textStyle="bold"
+        android:id="@+id/HeadArticleTitle"/>
+        <LinearLayout
+            android:gravity="center"
+            android:paddingTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               android:src="@drawable/article_type"
+                android:id="@+id/ArticleTypeImage"/>
+            <TextView
+                android:paddingLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:text="文章类型"
+                android:id="@+id/ArticleType"
+              />
+        </LinearLayout>
+         <RelativeLayout
+             android:paddingTop="60dp"
+             android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:id="@+id/HeadAuthouPortraits"
+                fresco:roundAsCircle="true"
+                fresco:placeholderImageScaleType="fitCenter"/>
+            <TextView
+                android:layout_toRightOf="@+id/HeadAuthouPortraits"
+                android:paddingLeft="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:text="作者名"
+                android:id="@+id/HeadAuthorName"
+               />
+         </RelativeLayout>
+
+
+</LinearLayout>

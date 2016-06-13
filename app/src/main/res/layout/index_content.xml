@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/index_head"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/index_username"
+        android:text="@string/noname"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@+id/index_head"
+        android:layout_toEndOf="@+id/index_head" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/index_time"
+        android:text="@string/defaulttime"
+        android:layout_alignBottom="@+id/index_head"
+        android:layout_alignLeft="@+id/index_username"
+        android:layout_alignStart="@+id/index_username" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/index_list_kind"
+        android:textSize="10dp"
+        android:text="真事·连载中"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageView
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:id="@+id/index_list_kind_img"
+        android:src="@drawable/ring_blue"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/index_list_kind"
+        android:layout_toStartOf="@+id/index_list_kind"
+        android:layout_marginRight="5dp"
+        android:layout_marginEnd="5dp" />
+</RelativeLayout>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:id="@+id/index_img"
+        android:scaleType="fitXY"/>
+</RelativeLayout>
+<RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/list_title"
+        android:text="一只猫"
+        android:textSize="20dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/list_maincontent"
+        android:layout_below="@id/list_title"
+        android:text="，我家猫看我的眼神怪怪的，我家猫看我的眼神怪怪的我家猫看我的眼神怪怪的，
+        我家猫看我的眼神怪怪的，我家猫看我的眼神怪怪的，我家猫看我的眼神怪怪的"/>
+
+</RelativeLayout>
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/talk_num"
+            android:text="100"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"/>
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_toLeftOf="@id/talk_num"
+            android:id="@+id/talk"
+            android:layout_marginRight="3dp"
+            android:src="@drawable/talk"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/recommend_num"
+            android:text="200"
+            android:layout_toLeftOf="@id/talk"
+            android:layout_marginRight="5dp"/>
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_toLeftOf="@id/recommend_num"
+            android:id="@+id/recommend"
+            android:layout_marginRight="3dp"
+            android:src="@drawable/recommend"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/collect_num"
+            android:text="300"
+            android:layout_toLeftOf="@id/recommend"
+            android:layout_marginRight="5dp"/>
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_toLeftOf="@id/collect_num"
+            android:id="@+id/collect"
+            android:layout_marginRight="3dp"
+            android:src="@drawable/collect"/>
+    </RelativeLayout>
+</LinearLayout>
+
